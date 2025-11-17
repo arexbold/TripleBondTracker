@@ -201,6 +201,7 @@ Graphics.MAIN_SCREEN_CONSTANTS = {
     POKEMON_INFO_WIDTH = 96,
     POKEMON_INFO_HEIGHT = 51,
     STAT_FRAME_HEIGHT = 10
+    --Add constants for party bars here later
 }
 Graphics.MAIN_FRAME_BADGE_INDICES = {
     [Graphics.BADGE_ALIGNMENT_TYPE.ABOVE] = 1,

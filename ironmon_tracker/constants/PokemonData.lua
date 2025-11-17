@@ -121,15 +121,15 @@ PokemonData.EVOLUTION_TYPES =
         METAL_COAT = "MTL CT", --Metal Coat held item
         KINGS_ROCK = "KNG RCK", --King's Rock held item
         CLAMPERL = "DST/DSS",
-        SNORUNT = {"42", "42/DWN"},
-        KIRLIA = {"30/DWN", "30"},
-        SLOWPOKE = "37/WTR",
+        SNORUNT = {"20", "20/DWN"},
+        KIRLIA = {"14/DWN", "14"},
+        SLOWPOKE = "20/WTR",
         POLIWHIRL = "RCK/WTR",
         MANTYKE = "RMRAID",
         KARRABLAST = "SHLMT",
         SHELMET = "KRBLST",
-        BURMY = "20 M/F",
-        COMBEE = {Graphics.TEXT.PLACEHOLDER, "21 F"}
+        BURMY = "16 M/F",
+        COMBEE = {Graphics.TEXT.PLACEHOLDER, "18 F"}
     }
 )
 
@@ -206,7 +206,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Bulbasaur",
         type = {PokemonData.POKEMON_TYPES.GRASS, PokemonData.POKEMON_TYPES.POISON},
-        evolution = "16",
+        evolution = "14",
         bst = "318",
         movelvls = {
             {3, 7, 9, 13, 13, 15, 19, 21, 25, 27, 31, 33, 37},
@@ -221,7 +221,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Ivysaur",
         type = {PokemonData.POKEMON_TYPES.GRASS, PokemonData.POKEMON_TYPES.POISON},
-        evolution = "32",
+        evolution = "24",
         bst = "405",
         movelvls = {
             {3, 7, 9, 13, 13, 15, 20, 23, 28, 31, 36, 39, 44},
@@ -251,7 +251,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Charmander",
         type = {PokemonData.POKEMON_TYPES.FIRE, PokemonData.POKEMON_TYPES.EMPTY},
-        evolution = "16",
+        evolution = "14",
         bst = "309",
         movelvls = {
             {7, 10, 16, 19, 25, 28, 34, 37},
@@ -266,7 +266,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Charmeleon",
         type = {PokemonData.POKEMON_TYPES.FIRE, PokemonData.POKEMON_TYPES.EMPTY},
-        evolution = "36",
+        evolution = "24",
         bst = "405",
         movelvls = {
             {7, 10, 17, 21, 28, 32, 39, 43},
@@ -296,7 +296,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Squirtle",
         type = {PokemonData.POKEMON_TYPES.WATER, PokemonData.POKEMON_TYPES.EMPTY},
-        evolution = "16",
+        evolution = "14",
         bst = "314",
         movelvls = {
             {4, 7, 10, 13, 16, 19, 22, 25, 28, 31, 34, 37},
@@ -311,7 +311,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Wartortle",
         type = {PokemonData.POKEMON_TYPES.WATER, PokemonData.POKEMON_TYPES.EMPTY},
-        evolution = "36",
+        evolution = "24",
         bst = "405",
         movelvls = {
             {4, 7, 10, 13, 16, 20, 24, 28, 32, 36, 40, 44},
@@ -431,7 +431,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Pidgey",
         type = {PokemonData.POKEMON_TYPES.NORMAL, PokemonData.POKEMON_TYPES.FLYING},
-        evolution = "18",
+        evolution = "14",
         bst = "251",
         movelvls = {
             {5, 9, 13, 17, 21, 25, 29, 33, 37, 41, 45, 49},
@@ -446,7 +446,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Pidgeotto",
         type = {PokemonData.POKEMON_TYPES.NORMAL, PokemonData.POKEMON_TYPES.FLYING},
-        evolution = "36",
+        evolution = "20",
         bst = "349",
         movelvls = {
             {5, 9, 13, 17, 22, 27, 32, 37, 42, 47, 52, 57},
@@ -476,7 +476,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Rattata",
         type = {PokemonData.POKEMON_TYPES.NORMAL, PokemonData.POKEMON_TYPES.EMPTY},
-        evolution = "20",
+        evolution = "16",
         bst = "253",
         movelvls = {
             {4, 7, 10, 13, 16, 19, 22, 25, 28, 31, 34},
@@ -506,7 +506,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Spearow",
         type = {PokemonData.POKEMON_TYPES.NORMAL, PokemonData.POKEMON_TYPES.FLYING},
-        evolution = "20",
+        evolution = "16",
         bst = "262",
         movelvls = {
             {5, 9, 13, 17, 21, 25, 29, 33, 37},
@@ -536,7 +536,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Ekans",
         type = {PokemonData.POKEMON_TYPES.POISON, PokemonData.POKEMON_TYPES.EMPTY},
-        evolution = "22",
+        evolution = "18",
         bst = "288",
         movelvls = {
             {4, 9, 12, 17, 20, 25, 25, 25, 28, 33, 36, 41},
@@ -596,7 +596,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Sandshrew",
         type = {PokemonData.POKEMON_TYPES.GROUND, PokemonData.POKEMON_TYPES.EMPTY},
-        evolution = "22",
+        evolution = "18",
         bst = "300",
         movelvls = {
             {3, 7, 9, 13, 15, 19, 21, 25, 27, 31, 33, 37},
@@ -626,7 +626,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Nidoran F",
         type = {PokemonData.POKEMON_TYPES.POISON, PokemonData.POKEMON_TYPES.EMPTY},
-        evolution = "16",
+        evolution = "14",
         bst = "275",
         movelvls = {
             {7, 9, 13, 19, 21, 25, 31, 33, 37, 43, 45},
@@ -671,7 +671,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Nidoran M",
         type = {PokemonData.POKEMON_TYPES.POISON, PokemonData.POKEMON_TYPES.EMPTY},
-        evolution = "16",
+        evolution = "14",
         bst = "273",
         movelvls = {
             {7, 9, 13, 19, 21, 25, 31, 33, 37, 43, 45},
@@ -806,7 +806,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Zubat",
         type = {PokemonData.POKEMON_TYPES.POISON, PokemonData.POKEMON_TYPES.FLYING},
-        evolution = "22",
+        evolution = "14",
         bst = "245",
         movelvls = {
             {5, 9, 13, 17, 21, 25, 29, 33, 37, 41},
@@ -837,7 +837,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Oddish",
         type = {PokemonData.POKEMON_TYPES.GRASS, PokemonData.POKEMON_TYPES.POISON},
-        evolution = "21",
+        evolution = "14",
         bst = "320",
         movelvls = {
             {5, 9, 13, 15, 17, 21, 25, 29, 33, 37, 41},
@@ -882,7 +882,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Paras",
         type = {PokemonData.POKEMON_TYPES.BUG, PokemonData.POKEMON_TYPES.GRASS},
-        evolution = "24",
+        evolution = "14",
         bst = "285",
         movelvls = {
             {6, 6, 11, 17, 22, 27, 33, 38, 43},
@@ -912,7 +912,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Venonat",
         type = {PokemonData.POKEMON_TYPES.BUG, PokemonData.POKEMON_TYPES.POISON},
-        evolution = "31",
+        evolution = "18",
         bst = "305",
         movelvls = {
             {5, 11, 13, 17, 23, 25, 29, 35, 37, 41, 47},
@@ -942,7 +942,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Diglett",
         type = {PokemonData.POKEMON_TYPES.GROUND, PokemonData.POKEMON_TYPES.EMPTY},
-        evolution = "26",
+        evolution = "16",
         bst = "265",
         movelvls = {
             {4, 7, 12, 15, 18, 23, 26, 29, 34, 37, 40},
@@ -972,7 +972,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Meowth",
         type = {PokemonData.POKEMON_TYPES.NORMAL, PokemonData.POKEMON_TYPES.EMPTY},
-        evolution = "28",
+        evolution = "16",
         bst = "290",
         movelvls = {
             {6, 9, 14, 17, 22, 25, 30, 33, 38, 41, 46, 49},
@@ -1002,7 +1002,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Psyduck",
         type = {PokemonData.POKEMON_TYPES.WATER, PokemonData.POKEMON_TYPES.EMPTY},
-        evolution = "33",
+        evolution = "20",
         bst = "320",
         movelvls = {
             {5, 9, 14, 18, 22, 27, 31, 35, 40, 44, 48},
@@ -1032,7 +1032,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Mankey",
         type = {PokemonData.POKEMON_TYPES.FIGHTING, PokemonData.POKEMON_TYPES.EMPTY},
-        evolution = "28",
+        evolution = "18",
         bst = "305",
         movelvls = {
             {9, 13, 17, 21, 25, 33, 37, 41, 45, 49},
@@ -1092,7 +1092,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Poliwag",
         type = {PokemonData.POKEMON_TYPES.WATER, PokemonData.POKEMON_TYPES.EMPTY},
-        evolution = "25",
+        evolution = "14",
         bst = "300",
         movelvls = {
             {5, 8, 11, 15, 18, 21, 25, 28, 31, 35, 38, 41},
@@ -1137,7 +1137,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Abra",
         type = {PokemonData.POKEMON_TYPES.PSYCHIC, PokemonData.POKEMON_TYPES.EMPTY},
-        evolution = "16",
+        evolution = "14",
         bst = "310",
         movelvls = {
             {},
@@ -1152,7 +1152,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Kadabra",
         type = {PokemonData.POKEMON_TYPES.PSYCHIC, PokemonData.POKEMON_TYPES.EMPTY},
-        evolution = "37", -- Level 37 replaces trade evolution
+        evolution = "24",
         bst = "400",
         movelvls = {
             {16, 18, 22, 24, 28, 30, 34, 36, 40, 42, 46},
@@ -1182,7 +1182,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Machop",
         type = {PokemonData.POKEMON_TYPES.FIGHTING, PokemonData.POKEMON_TYPES.EMPTY},
-        evolution = "28",
+        evolution = "14",
         bst = "305",
         movelvls = {
             {7, 10, 13, 19, 22, 25, 31, 34, 37, 43, 46},
@@ -1197,7 +1197,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Machoke",
         type = {PokemonData.POKEMON_TYPES.FIGHTING, PokemonData.POKEMON_TYPES.EMPTY},
-        evolution = "37", -- Level 37 replaces trade evolution
+        evolution = "24",
         bst = "405",
         movelvls = {
             {7, 10, 13, 19, 22, 25, 32, 36, 40, 44, 51},
@@ -1227,7 +1227,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Bellsprout",
         type = {PokemonData.POKEMON_TYPES.GRASS, PokemonData.POKEMON_TYPES.POISON},
-        evolution = "21",
+        evolution = "14",
         bst = "300",
         movelvls = {
             {7, 11, 13, 15, 17, 23, 27, 29, 35, 39, 41, 47},
@@ -1272,7 +1272,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Tentacool",
         type = {PokemonData.POKEMON_TYPES.WATER, PokemonData.POKEMON_TYPES.POISON},
-        evolution = "30",
+        evolution = "20",
         bst = "335",
         movelvls = {
             {5, 8, 12, 15, 19, 22, 26, 29, 33, 36, 40, 43},
@@ -1302,7 +1302,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Geodude",
         type = {PokemonData.POKEMON_TYPES.ROCK, PokemonData.POKEMON_TYPES.GROUND},
-        evolution = "25",
+        evolution = "14",
         bst = "300",
         movelvls = {
             {4, 8, 11, 15, 18, 22, 25, 29, 32, 36, 39},
@@ -1317,7 +1317,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Graveler",
         type = {PokemonData.POKEMON_TYPES.ROCK, PokemonData.POKEMON_TYPES.GROUND},
-        evolution = "37", -- Level 37 replaces trade evolution
+        evolution = "22",
         bst = "390",
         movelvls = {
             {4, 8, 11, 15, 18, 22, 27, 33, 38, 44, 49},
@@ -1347,7 +1347,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Ponyta",
         type = {PokemonData.POKEMON_TYPES.FIRE, PokemonData.POKEMON_TYPES.EMPTY},
-        evolution = "40",
+        evolution = "20",
         bst = "410",
         movelvls = {
             {7, 10, 16, 19, 25, 28, 34, 38, 44, 48},
@@ -1407,7 +1407,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Magnemite",
         type = {PokemonData.POKEMON_TYPES.ELECTRIC, PokemonData.POKEMON_TYPES.STEEL},
-        evolution = "30",
+        evolution = "14",
         bst = "325",
         movelvls = {
             {6, 11, 14, 17, 22, 27, 30, 33, 38, 43, 46, 49, 54},
@@ -1422,7 +1422,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Magneton",
         type = {PokemonData.POKEMON_TYPES.ELECTRIC, PokemonData.POKEMON_TYPES.STEEL},
-        evolution = "40",
+        evolution = "24",
         bst = "465",
         movelvls = {
             {6, 11, 14, 17, 22, 27, 30, 34, 40, 46, 50, 54, 60},
@@ -1452,7 +1452,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Doduo",
         type = {PokemonData.POKEMON_TYPES.NORMAL, PokemonData.POKEMON_TYPES.FLYING},
-        evolution = "31",
+        evolution = "18",
         bst = "310",
         movelvls = {
             {5, 10, 14, 19, 23, 28, 32, 37, 41, 46},
@@ -1482,7 +1482,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Seel",
         type = {PokemonData.POKEMON_TYPES.WATER, PokemonData.POKEMON_TYPES.EMPTY},
-        evolution = "34",
+        evolution = "18",
         bst = "325",
         movelvls = {
             {3, 7, 11, 13, 17, 21, 23, 27, 31, 33, 37, 41, 43, 47, 51},
@@ -1512,7 +1512,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Grimer",
         type = {PokemonData.POKEMON_TYPES.POISON, PokemonData.POKEMON_TYPES.EMPTY},
-        evolution = "38",
+        evolution = "20",
         bst = "325",
         movelvls = {
             {4, 7, 12, 17, 20, 23, 28, 33, 36, 39, 44, 49},
@@ -1572,7 +1572,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Gastly",
         type = {PokemonData.POKEMON_TYPES.GHOST, PokemonData.POKEMON_TYPES.POISON},
-        evolution = "25",
+        evolution = "14",
         bst = "310",
         movelvls = {
             {5, 8, 12, 15, 19, 22, 26, 29, 33, 36, 40, 43},
@@ -1587,7 +1587,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Haunter",
         type = {PokemonData.POKEMON_TYPES.GHOST, PokemonData.POKEMON_TYPES.POISON},
-        evolution = "37", -- Level 37 replaces trade evolution
+        evolution = "24",
         bst = "405",
         movelvls = {
             {5, 8, 12, 15, 19, 22, 25, 28, 33, 39, 44, 50, 55},
@@ -1632,7 +1632,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Drowzee",
         type = {PokemonData.POKEMON_TYPES.PSYCHIC, PokemonData.POKEMON_TYPES.EMPTY},
-        evolution = "26",
+        evolution = "18",
         bst = "328",
         movelvls = {
             {7, 9, 15, 18, 21, 26, 29, 32, 37, 40, 43, 50, 53},
@@ -1662,7 +1662,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Krabby",
         type = {PokemonData.POKEMON_TYPES.WATER, PokemonData.POKEMON_TYPES.EMPTY},
-        evolution = "28",
+        evolution = "18",
         bst = "325",
         movelvls = {
             {5, 9, 11, 15, 19, 21, 25, 29, 31, 35, 39, 41, 45},
@@ -1692,7 +1692,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Voltorb",
         type = {PokemonData.POKEMON_TYPES.ELECTRIC, PokemonData.POKEMON_TYPES.EMPTY},
-        evolution = "30",
+        evolution = "20",
         bst = "330",
         movelvls = {
             {5, 8, 12, 15, 19, 22, 26, 29, 33, 36, 40, 43, 47},
@@ -1752,7 +1752,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Cubone",
         type = {PokemonData.POKEMON_TYPES.GROUND, PokemonData.POKEMON_TYPES.EMPTY},
-        evolution = "28",
+        evolution = "16",
         bst = "320",
         movelvls = {
             {3, 7, 11, 13, 17, 21, 23, 27, 31, 33, 37, 41, 43},
@@ -1827,7 +1827,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Koffing",
         type = {PokemonData.POKEMON_TYPES.POISON, PokemonData.POKEMON_TYPES.EMPTY},
-        evolution = "35",
+        evolution = "20",
         bst = "340",
         movelvls = {
             {6, 10, 15, 19, 24, 28, 33, 37, 42, 46, 51},
@@ -1857,7 +1857,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Rhyhorn",
         type = {PokemonData.POKEMON_TYPES.GROUND, PokemonData.POKEMON_TYPES.ROCK},
-        evolution = "42",
+        evolution = "20",
         bst = "345",
         movelvls = {
             {9, 13, 21, 25, 33, 37, 45, 49, 57},
@@ -1933,7 +1933,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Horsea",
         type = {PokemonData.POKEMON_TYPES.WATER, PokemonData.POKEMON_TYPES.EMPTY},
-        evolution = "32",
+        evolution = "14",
         bst = "295",
         movelvls = {
             {4, 8, 11, 14, 18, 23, 26, 30, 35, 38, 42},
@@ -1963,7 +1963,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Goldeen",
         type = {PokemonData.POKEMON_TYPES.WATER, PokemonData.POKEMON_TYPES.EMPTY},
-        evolution = "33",
+        evolution = "18",
         bst = "320",
         movelvls = {
             {7, 11, 17, 21, 27, 31, 37, 41, 47, 51},
@@ -2174,7 +2174,7 @@ PokemonData.POKEMON_MASTER_LIST = {
         name = "Ditto",
         type = {PokemonData.POKEMON_TYPES.NORMAL, PokemonData.POKEMON_TYPES.EMPTY},
         evolution = PokemonData.EVOLUTION_TYPES.NONE,
-        bst = "288",
+        bst = "400",
         movelvls = {
             {},
             {},
@@ -2263,7 +2263,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Omanyte",
         type = {PokemonData.POKEMON_TYPES.ROCK, PokemonData.POKEMON_TYPES.WATER},
-        evolution = "40",
+        evolution = "20",
         bst = "355",
         movelvls = {
             {7, 10, 16, 19, 25, 28, 34, 37, 43, 46, 52},
@@ -2293,7 +2293,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Kabuto",
         type = {PokemonData.POKEMON_TYPES.ROCK, PokemonData.POKEMON_TYPES.WATER},
-        evolution = "40",
+        evolution = "20",
         bst = "355",
         movelvls = {
             {6, 11, 16, 21, 26, 31, 36, 41, 46, 51},
@@ -2398,7 +2398,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Dratini",
         type = {PokemonData.POKEMON_TYPES.DRAGON, PokemonData.POKEMON_TYPES.EMPTY},
-        evolution = "30",
+        evolution = "20",
         bst = "300",
         movelvls = {
             {5, 11, 15, 21, 25, 31, 35, 41, 45, 51, 55},
@@ -2413,7 +2413,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Dragonair",
         type = {PokemonData.POKEMON_TYPES.DRAGON, PokemonData.POKEMON_TYPES.EMPTY},
-        evolution = "55",
+        evolution = "48",
         bst = "420",
         movelvls = {
             {5, 11, 15, 21, 25, 33, 39, 47, 53, 61, 67},
@@ -2473,7 +2473,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Chikorita",
         type = {PokemonData.POKEMON_TYPES.GRASS, PokemonData.POKEMON_TYPES.EMPTY},
-        evolution = "16",
+        evolution = "14",
         bst = "318",
         movelvls = {
             {6, 9, 12, 17, 20, 23, 28, 31, 34, 39, 42, 45},
@@ -2488,7 +2488,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Bayleef",
         type = {PokemonData.POKEMON_TYPES.GRASS, PokemonData.POKEMON_TYPES.EMPTY},
-        evolution = "32",
+        evolution = "24",
         bst = "405",
         movelvls = {
             {6, 9, 12, 18, 22, 26, 32, 36, 40, 46, 50, 54},
@@ -2533,7 +2533,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Quilava",
         type = {PokemonData.POKEMON_TYPES.FIRE, PokemonData.POKEMON_TYPES.EMPTY},
-        evolution = "36",
+        evolution = "24",
         bst = "405",
         movelvls = {
             {4, 10, 13, 20, 24, 31, 35, 42, 46, 53, 57},
@@ -2563,7 +2563,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Totodile",
         type = {PokemonData.POKEMON_TYPES.WATER, PokemonData.POKEMON_TYPES.EMPTY},
-        evolution = "18",
+        evolution = "14",
         bst = "314",
         movelvls = {
             {6, 8, 13, 15, 20, 22, 27, 29, 34, 36, 41, 43},
@@ -2578,7 +2578,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Croconaw",
         type = {PokemonData.POKEMON_TYPES.WATER, PokemonData.POKEMON_TYPES.EMPTY},
-        evolution = "30",
+        evolution = "24",
         bst = "405",
         movelvls = {
             {6, 8, 13, 15, 21, 24, 30, 33, 39, 42, 48, 51},
@@ -2638,7 +2638,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Hoothoot",
         type = {PokemonData.POKEMON_TYPES.NORMAL, PokemonData.POKEMON_TYPES.FLYING},
-        evolution = "20",
+        evolution = "16",
         bst = "262",
         movelvls = {
             {5, 9, 13, 17, 21, 25, 29, 33, 37, 41, 45, 49},
@@ -2668,7 +2668,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Ledyba",
         type = {PokemonData.POKEMON_TYPES.BUG, PokemonData.POKEMON_TYPES.FLYING},
-        evolution = "18",
+        evolution = "14",
         bst = "265",
         movelvls = {
             {6, 9, 14, 14, 14, 17, 22, 25, 30, 33, 38, 41},
@@ -2698,7 +2698,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Spinarak",
         type = {PokemonData.POKEMON_TYPES.BUG, PokemonData.POKEMON_TYPES.POISON},
-        evolution = "22",
+        evolution = "14",
         bst = "250",
         movelvls = {
             {5, 8, 12, 15, 19, 22, 26, 29, 33, 36, 40, 43},
@@ -2743,7 +2743,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Chinchou",
         type = {PokemonData.POKEMON_TYPES.WATER, PokemonData.POKEMON_TYPES.ELECTRIC},
-        evolution = "27",
+        evolution = "18",
         bst = "330",
         movelvls = {
             {6, 9, 12, 17, 20, 23, 28, 31, 34, 39, 42, 45},
@@ -2852,7 +2852,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Natu",
         type = {PokemonData.POKEMON_TYPES.PSYCHIC, PokemonData.POKEMON_TYPES.FLYING},
-        evolution = "25",
+        evolution = "18",
         bst = "320",
         movelvls = {
             {6, 9, 12, 17, 20, 23, 28, 33, 36, 39, 44, 44, 47},
@@ -2882,7 +2882,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Mareep",
         type = {PokemonData.POKEMON_TYPES.ELECTRIC, PokemonData.POKEMON_TYPES.EMPTY},
-        evolution = "15",
+        evolution = "14",
         bst = "280",
         movelvls = {
             {5, 10, 14, 19, 23, 28, 32, 37, 41, 46},
@@ -2897,7 +2897,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Flaaffy",
         type = {PokemonData.POKEMON_TYPES.ELECTRIC, PokemonData.POKEMON_TYPES.EMPTY},
-        evolution = "30",
+        evolution = "24",
         bst = "365",
         movelvls = {
             {5, 10, 14, 20, 25, 31, 36, 42, 47, 53},
@@ -2942,7 +2942,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Marill",
         type = {PokemonData.POKEMON_TYPES.WATER, PokemonData.POKEMON_TYPES.EMPTY},
-        evolution = "18",
+        evolution = "16",
         bst = "250",
         movelvls = {
             {2, 7, 10, 15, 18, 23, 27, 32, 37, 42},
@@ -2958,7 +2958,7 @@ PokemonData.POKEMON_MASTER_LIST = {
         name = "Azumarill",
         type = {PokemonData.POKEMON_TYPES.WATER, PokemonData.POKEMON_TYPES.EMPTY},
         evolution = PokemonData.EVOLUTION_TYPES.NONE,
-        bst = "410",
+        bst = "470",
         movelvls = {
             {2, 7, 10, 15, 20, 27, 33, 40, 47, 54},
             {2, 7, 10, 15, 20, 27, 33, 40, 47, 54},
@@ -3002,7 +3002,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Hoppip",
         type = {PokemonData.POKEMON_TYPES.GRASS, PokemonData.POKEMON_TYPES.FLYING},
-        evolution = "18",
+        evolution = "14",
         bst = "250",
         movelvls = {
             {4, 7, 10, 12, 14, 16, 19, 22, 25, 28, 31, 34, 37, 40, 43},
@@ -3017,7 +3017,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Skiploom",
         type = {PokemonData.POKEMON_TYPES.GRASS, PokemonData.POKEMON_TYPES.FLYING},
-        evolution = "27",
+        evolution = "20",
         bst = "340",
         movelvls = {
             {4, 7, 10, 12, 14, 16, 20, 24, 28, 32, 36, 40, 44, 48, 52},
@@ -3107,7 +3107,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Wooper",
         type = {PokemonData.POKEMON_TYPES.WATER, PokemonData.POKEMON_TYPES.GROUND},
-        evolution = "20",
+        evolution = "16",
         bst = "210",
         movelvls = {
             {5, 9, 15, 19, 23, 29, 33, 37, 43, 43, 47},
@@ -3257,7 +3257,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Pineco",
         type = {PokemonData.POKEMON_TYPES.BUG, PokemonData.POKEMON_TYPES.EMPTY},
-        evolution = "31",
+        evolution = "18",
         bst = "290",
         movelvls = {
             {6, 9, 12, 17, 20, 23, 28, 31, 34, 39, 42},
@@ -3332,7 +3332,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Snubbull",
         type = {PokemonData.POKEMON_TYPES.NORMAL, PokemonData.POKEMON_TYPES.EMPTY},
-        evolution = "23",
+        evolution = "18",
         bst = "300",
         movelvls = {
             {7, 13, 19, 25, 31, 37, 43, 49},
@@ -3437,7 +3437,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Teddiursa",
         type = {PokemonData.POKEMON_TYPES.NORMAL, PokemonData.POKEMON_TYPES.EMPTY},
-        evolution = "30",
+        evolution = "20",
         bst = "330",
         movelvls = {
             {8, 15, 22, 29, 36, 43, 43, 50, 57},
@@ -3467,7 +3467,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Slugma",
         type = {PokemonData.POKEMON_TYPES.FIRE, PokemonData.POKEMON_TYPES.EMPTY},
-        evolution = "38",
+        evolution = "16",
         bst = "250",
         movelvls = {
             {8, 11, 16, 23, 26, 31, 38, 41, 46, 53, 56},
@@ -3497,7 +3497,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Swinub",
         type = {PokemonData.POKEMON_TYPES.ICE, PokemonData.POKEMON_TYPES.GROUND},
-        evolution = "33",
+        evolution = "14",
         bst = "250",
         movelvls = {
             {4, 8, 13, 16, 20, 25, 28, 32, 37, 40, 44, 49},
@@ -3512,7 +3512,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Piloswine",
         type = {PokemonData.POKEMON_TYPES.ICE, PokemonData.POKEMON_TYPES.GROUND},
-        evolution = "45",
+        evolution = "24",
         bst = "450",
         movelvls = {
             {4, 8, 13, 16, 20, 25, 28, 32, 33, 40, 48, 56, 65},
@@ -3542,7 +3542,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Remoraid",
         type = {PokemonData.POKEMON_TYPES.WATER, PokemonData.POKEMON_TYPES.EMPTY},
-        evolution = "25",
+        evolution = "20",
         bst = "300",
         movelvls = {
             {6, 10, 14, 19, 23, 27, 32, 36, 40, 45},
@@ -3617,7 +3617,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Houndour",
         type = {PokemonData.POKEMON_TYPES.DARK, PokemonData.POKEMON_TYPES.FIRE},
-        evolution = "24",
+        evolution = "20",
         bst = "330",
         movelvls = {
             {4, 9, 14, 17, 22, 27, 30, 35, 40, 43, 48, 53},
@@ -3662,7 +3662,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Phanpy",
         type = {PokemonData.POKEMON_TYPES.GROUND, PokemonData.POKEMON_TYPES.EMPTY},
-        evolution = "25",
+        evolution = "20",
         bst = "330",
         movelvls = {
             {6, 10, 15, 19, 24, 28, 33, 37, 42},
@@ -3723,7 +3723,7 @@ PokemonData.POKEMON_MASTER_LIST = {
         name = "Smeargle",
         type = {PokemonData.POKEMON_TYPES.NORMAL, PokemonData.POKEMON_TYPES.EMPTY},
         evolution = PokemonData.EVOLUTION_TYPES.NONE,
-        bst = "250",
+        bst = "400",
         movelvls = {
             {11, 21, 31, 41, 51, 61, 71, 81, 91},
             {11, 21, 31, 41, 51, 61, 71, 81, 91},
@@ -3767,7 +3767,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Smoochum",
         type = {PokemonData.POKEMON_TYPES.ICE, PokemonData.POKEMON_TYPES.PSYCHIC},
-        evolution = "30",
+        evolution = "20",
         bst = "305",
         movelvls = {
             {5, 8, 11, 15, 18, 21, 25, 28, 31, 35, 38, 41, 45},
@@ -3782,7 +3782,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Elekid",
         type = {PokemonData.POKEMON_TYPES.ELECTRIC, PokemonData.POKEMON_TYPES.EMPTY},
-        evolution = "30",
+        evolution = "20",
         bst = "360",
         movelvls = {
             {7, 10, 16, 19, 25, 28, 34, 37, 43, 46},
@@ -3797,7 +3797,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Magby",
         type = {PokemonData.POKEMON_TYPES.FIRE, PokemonData.POKEMON_TYPES.EMPTY},
-        evolution = "30",
+        evolution = "20",
         bst = "365",
         movelvls = {
             {7, 10, 16, 19, 25, 28, 34, 37, 43, 46},
@@ -3887,7 +3887,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Larvitar",
         type = {PokemonData.POKEMON_TYPES.ROCK, PokemonData.POKEMON_TYPES.GROUND},
-        evolution = "30",
+        evolution = "20",
         bst = "300",
         movelvls = {
             {5, 10, 14, 19, 23, 28, 32, 37, 41, 46, 50},
@@ -3902,7 +3902,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Pupitar",
         type = {PokemonData.POKEMON_TYPES.ROCK, PokemonData.POKEMON_TYPES.GROUND},
-        evolution = "55",
+        evolution = "30",
         bst = "410",
         movelvls = {
             {5, 10, 14, 19, 23, 28, 34, 41, 47, 54, 60},
@@ -3977,7 +3977,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Treecko",
         type = {PokemonData.POKEMON_TYPES.GRASS, PokemonData.POKEMON_TYPES.EMPTY},
-        evolution = "16",
+        evolution = "14",
         bst = "310",
         movelvls = {
             {6, 11, 16, 21, 26, 31, 36, 41, 46, 51},
@@ -3992,7 +3992,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Grovyle",
         type = {PokemonData.POKEMON_TYPES.GRASS, PokemonData.POKEMON_TYPES.EMPTY},
-        evolution = "36",
+        evolution = "24",
         bst = "405",
         movelvls = {
             {6, 11, 16, 17, 23, 29, 35, 41, 47, 53, 59},
@@ -4022,7 +4022,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Torchic",
         type = {PokemonData.POKEMON_TYPES.FIRE, PokemonData.POKEMON_TYPES.EMPTY},
-        evolution = "16",
+        evolution = "14",
         bst = "310",
         movelvls = {
             {7, 10, 16, 19, 25, 28, 34, 37, 43},
@@ -4037,7 +4037,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Combusken",
         type = {PokemonData.POKEMON_TYPES.FIRE, PokemonData.POKEMON_TYPES.FIGHTING},
-        evolution = "36",
+        evolution = "24",
         bst = "405",
         movelvls = {
             {7, 13, 16, 17, 21, 28, 32, 39, 43, 50, 54},
@@ -4067,7 +4067,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Mudkip",
         type = {PokemonData.POKEMON_TYPES.WATER, PokemonData.POKEMON_TYPES.EMPTY},
-        evolution = "16",
+        evolution = "14",
         bst = "310",
         movelvls = {
             {6, 10, 15, 19, 24, 28, 33, 37, 42, 46},
@@ -4082,7 +4082,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Marshtomp",
         type = {PokemonData.POKEMON_TYPES.WATER, PokemonData.POKEMON_TYPES.GROUND},
-        evolution = "36",
+        evolution = "24",
         bst = "405",
         movelvls = {
             {6, 10, 15, 16, 20, 25, 31, 37, 42, 46, 53},
@@ -4112,7 +4112,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Poochyena",
         type = {PokemonData.POKEMON_TYPES.DARK, PokemonData.POKEMON_TYPES.EMPTY},
-        evolution = "18",
+        evolution = "16",
         bst = "220",
         movelvls = {
             {5, 9, 13, 17, 21, 25, 29, 33, 37, 41, 45, 49, 53},
@@ -4142,7 +4142,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Zigzagoon",
         type = {PokemonData.POKEMON_TYPES.NORMAL, PokemonData.POKEMON_TYPES.EMPTY},
-        evolution = "20",
+        evolution = "16",
         bst = "240",
         movelvls = {
             {5, 9, 13, 17, 21, 25, 29, 33, 37, 41, 45},
@@ -4337,7 +4337,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Taillow",
         type = {PokemonData.POKEMON_TYPES.NORMAL, PokemonData.POKEMON_TYPES.FLYING},
-        evolution = "22",
+        evolution = "16",
         bst = "270",
         movelvls = {
             {4, 8, 13, 19, 26, 34, 43, 53},
@@ -4367,7 +4367,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Wingull",
         type = {PokemonData.POKEMON_TYPES.WATER, PokemonData.POKEMON_TYPES.FLYING},
-        evolution = "25",
+        evolution = "18",
         bst = "270",
         movelvls = {
             {6, 11, 16, 19, 24, 29, 34, 37, 42, 47},
@@ -4397,7 +4397,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Ralts",
         type = {PokemonData.POKEMON_TYPES.PSYCHIC, PokemonData.POKEMON_TYPES.EMPTY},
-        evolution = "20",
+        evolution = "14",
         bst = "198",
         movelvls = {
             {6, 10, 12, 17, 21, 23, 28, 32, 34, 39, 43, 45},
@@ -4442,7 +4442,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Surskit",
         type = {PokemonData.POKEMON_TYPES.BUG, PokemonData.POKEMON_TYPES.WATER},
-        evolution = "22",
+        evolution = "16",
         bst = "269",
         movelvls = {
             {7, 13, 19, 25, 31, 37, 37, 43},
@@ -4472,7 +4472,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Shroomish",
         type = {PokemonData.POKEMON_TYPES.GRASS, PokemonData.POKEMON_TYPES.EMPTY},
-        evolution = "23",
+        evolution = "18",
         bst = "295",
         movelvls = {
             {5, 9, 13, 17, 21, 25, 29, 33, 37, 41, 45},
@@ -4502,7 +4502,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Slakoth",
         type = {PokemonData.POKEMON_TYPES.NORMAL, PokemonData.POKEMON_TYPES.EMPTY},
-        evolution = "18",
+        evolution = "14",
         bst = "280",
         movelvls = {
             {7, 13, 19, 25, 31, 37, 43},
@@ -4517,7 +4517,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Vigoroth",
         type = {PokemonData.POKEMON_TYPES.NORMAL, PokemonData.POKEMON_TYPES.EMPTY},
-        evolution = "36",
+        evolution = "24",
         bst = "440",
         movelvls = {
             {7, 13, 19, 25, 31, 37, 43, 49},
@@ -4592,7 +4592,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Whismur",
         type = {PokemonData.POKEMON_TYPES.NORMAL, PokemonData.POKEMON_TYPES.EMPTY},
-        evolution = "20",
+        evolution = "14",
         bst = "240",
         movelvls = {
             {5, 11, 15, 21, 25, 31, 35, 41, 41, 45},
@@ -4607,7 +4607,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Loudred",
         type = {PokemonData.POKEMON_TYPES.NORMAL, PokemonData.POKEMON_TYPES.EMPTY},
-        evolution = "40",
+        evolution = "22",
         bst = "360",
         movelvls = {
             {5, 11, 15, 20, 23, 29, 37, 43, 51, 51, 57},
@@ -4637,7 +4637,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Makuhita",
         type = {PokemonData.POKEMON_TYPES.FIGHTING, PokemonData.POKEMON_TYPES.EMPTY},
-        evolution = "24",
+        evolution = "18",
         bst = "237",
         movelvls = {
             {4, 7, 10, 13, 16, 19, 22, 25, 28, 31, 34, 37, 40, 43},
@@ -4683,7 +4683,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Nosepass",
         type = {PokemonData.POKEMON_TYPES.ROCK, PokemonData.POKEMON_TYPES.EMPTY},
-        evolution = "40",
+        evolution = "20",
         bst = "375",
         movelvls = {
             {7, 13, 19, 25, 31, 37, 43, 49, 55, 61, 67, 73},
@@ -4744,7 +4744,7 @@ PokemonData.POKEMON_MASTER_LIST = {
         name = "Mawile",
         type = {PokemonData.POKEMON_TYPES.STEEL, PokemonData.POKEMON_TYPES.EMPTY},
         evolution = PokemonData.EVOLUTION_TYPES.NONE,
-        bst = "380",
+        bst = "440",
         movelvls = {
             {6, 11, 16, 21, 26, 31, 36, 41, 46, 51, 51, 51, 56},
             {6, 11, 16, 21, 26, 31, 36, 41, 46, 51, 51, 51, 56},
@@ -4758,7 +4758,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Aron",
         type = {PokemonData.POKEMON_TYPES.STEEL, PokemonData.POKEMON_TYPES.ROCK},
-        evolution = "32",
+        evolution = "14",
         bst = "330",
         movelvls = {
             {4, 8, 11, 15, 18, 22, 25, 29, 32, 36, 39, 43, 46},
@@ -4773,7 +4773,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Lairon",
         type = {PokemonData.POKEMON_TYPES.STEEL, PokemonData.POKEMON_TYPES.ROCK},
-        evolution = "42",
+        evolution = "24",
         bst = "430",
         movelvls = {
             {4, 8, 11, 15, 18, 22, 25, 29, 34, 40, 45, 51, 56},
@@ -4803,7 +4803,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Meditite",
         type = {PokemonData.POKEMON_TYPES.FIGHTING, PokemonData.POKEMON_TYPES.PSYCHIC},
-        evolution = "37",
+        evolution = "16",
         bst = "280",
         movelvls = {
             {4, 8, 11, 15, 18, 22, 25, 29, 32, 36, 39, 43, 46},
@@ -4819,7 +4819,7 @@ PokemonData.POKEMON_MASTER_LIST = {
         name = "Medicham",
         type = {PokemonData.POKEMON_TYPES.FIGHTING, PokemonData.POKEMON_TYPES.PSYCHIC},
         evolution = PokemonData.EVOLUTION_TYPES.NONE,
-        bst = "410",
+        bst = "470",
         movelvls = {
             {4, 8, 11, 15, 18, 22, 25, 29, 32, 36, 42, 49, 55},
             {4, 8, 11, 15, 18, 22, 25, 29, 32, 36, 42, 49, 55},
@@ -4833,7 +4833,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Electrike",
         type = {PokemonData.POKEMON_TYPES.ELECTRIC, PokemonData.POKEMON_TYPES.EMPTY},
-        evolution = "26",
+        evolution = "18",
         bst = "295",
         movelvls = {
             {4, 9, 12, 17, 20, 25, 28, 33, 36, 41, 44, 49},
@@ -4864,7 +4864,7 @@ PokemonData.POKEMON_MASTER_LIST = {
         name = "Plusle",
         type = {PokemonData.POKEMON_TYPES.ELECTRIC, PokemonData.POKEMON_TYPES.EMPTY},
         evolution = PokemonData.EVOLUTION_TYPES.NONE,
-        bst = "405",
+        bst = "440",
         movelvls = {
             {3, 7, 10, 15, 17, 21, 24, 29, 31, 35, 38, 42, 44, 48, 51},
             {3, 7, 10, 15, 17, 21, 24, 29, 31, 35, 38, 42, 44, 48, 51},
@@ -4879,7 +4879,7 @@ PokemonData.POKEMON_MASTER_LIST = {
         name = "Minun",
         type = {PokemonData.POKEMON_TYPES.ELECTRIC, PokemonData.POKEMON_TYPES.EMPTY},
         evolution = PokemonData.EVOLUTION_TYPES.NONE,
-        bst = "405",
+        bst = "440",
         movelvls = {
             {3, 7, 10, 15, 17, 21, 24, 29, 31, 35, 38, 42, 44, 48, 51},
             {3, 7, 10, 15, 17, 21, 24, 29, 31, 35, 38, 42, 44, 48, 51},
@@ -4938,7 +4938,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Gulpin",
         type = {PokemonData.POKEMON_TYPES.POISON, PokemonData.POKEMON_TYPES.EMPTY},
-        evolution = "26",
+        evolution = "20",
         bst = "302",
         movelvls = {
             {6, 9, 14, 17, 23, 28, 34, 34, 34, 39, 44, 49, 54},
@@ -4968,7 +4968,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Carvanha",
         type = {PokemonData.POKEMON_TYPES.WATER, PokemonData.POKEMON_TYPES.DARK},
-        evolution = "30",
+        evolution = "20",
         bst = "305",
         movelvls = {
             {6, 8, 11, 16, 18, 21, 26, 28, 31, 36, 38},
@@ -4998,7 +4998,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Wailmer",
         type = {PokemonData.POKEMON_TYPES.WATER, PokemonData.POKEMON_TYPES.EMPTY},
-        evolution = "40",
+        evolution = "20",
         bst = "400",
         movelvls = {
             {4, 7, 11, 14, 17, 21, 24, 27, 31, 34, 37, 41, 44, 47},
@@ -5028,7 +5028,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Numel",
         type = {PokemonData.POKEMON_TYPES.FIRE, PokemonData.POKEMON_TYPES.GROUND},
-        evolution = "33",
+        evolution = "18",
         bst = "305",
         movelvls = {
             {5, 11, 15, 21, 25, 31, 35, 41, 45, 51},
@@ -5073,7 +5073,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Spoink",
         type = {PokemonData.POKEMON_TYPES.PSYCHIC, PokemonData.POKEMON_TYPES.EMPTY},
-        evolution = "32",
+        evolution = "20",
         bst = "330",
         movelvls = {
             {7, 10, 14, 15, 18, 21, 26, 29, 29, 34, 41, 46, 48},
@@ -5118,7 +5118,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Trapinch",
         type = {PokemonData.POKEMON_TYPES.GROUND, PokemonData.POKEMON_TYPES.EMPTY},
-        evolution = "35",
+        evolution = "14",
         bst = "290",
         movelvls = {
             {9, 17, 25, 33, 41, 49, 57, 65, 73, 81, 89},
@@ -5133,7 +5133,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Vibrava",
         type = {PokemonData.POKEMON_TYPES.GROUND, PokemonData.POKEMON_TYPES.DRAGON},
-        evolution = "45",
+        evolution = "40",
         bst = "340",
         movelvls = {
             {9, 17, 25, 33, 35, 41, 49, 57},
@@ -5163,7 +5163,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Cacnea",
         type = {PokemonData.POKEMON_TYPES.GRASS, PokemonData.POKEMON_TYPES.EMPTY},
-        evolution = "32",
+        evolution = "20",
         bst = "335",
         movelvls = {
             {5, 9, 13, 17, 21, 25, 29, 33, 37, 41, 45, 49, 53, 57},
@@ -5193,7 +5193,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Swablu",
         type = {PokemonData.POKEMON_TYPES.NORMAL, PokemonData.POKEMON_TYPES.FLYING},
-        evolution = "35",
+        evolution = "22",
         bst = "310",
         movelvls = {
             {5, 9, 13, 18, 23, 28, 32, 36, 40, 45, 50},
@@ -5283,7 +5283,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Barboach",
         type = {PokemonData.POKEMON_TYPES.WATER, PokemonData.POKEMON_TYPES.GROUND},
-        evolution = "30",
+        evolution = "18",
         bst = "288",
         movelvls = {
             {6, 6, 10, 14, 18, 22, 26, 31, 31, 35, 39, 43, 47},
@@ -5313,7 +5313,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Corphish",
         type = {PokemonData.POKEMON_TYPES.WATER, PokemonData.POKEMON_TYPES.EMPTY},
-        evolution = "30",
+        evolution = "18",
         bst = "308",
         movelvls = {
             {7, 10, 13, 20, 23, 26, 32, 35, 38, 44, 47, 53},
@@ -5343,7 +5343,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Baltoy",
         type = {PokemonData.POKEMON_TYPES.GROUND, PokemonData.POKEMON_TYPES.PSYCHIC},
-        evolution = "36",
+        evolution = "20",
         bst = "300",
         movelvls = {
             {3, 5, 7, 11, 15, 19, 25, 31, 37, 45, 53, 61, 71},
@@ -5373,7 +5373,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Lileep",
         type = {PokemonData.POKEMON_TYPES.ROCK, PokemonData.POKEMON_TYPES.GRASS},
-        evolution = "40",
+        evolution = "20",
         bst = "355",
         movelvls = {
             {8, 15, 22, 29, 36, 43, 50, 57, 57, 57, 64},
@@ -5403,7 +5403,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Anorith",
         type = {PokemonData.POKEMON_TYPES.ROCK, PokemonData.POKEMON_TYPES.BUG},
-        evolution = "40",
+        evolution = "20",
         bst = "355",
         movelvls = {
             {7, 13, 19, 25, 31, 37, 43, 49, 55, 61},
@@ -5433,7 +5433,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Feebas",
         type = {PokemonData.POKEMON_TYPES.WATER, PokemonData.POKEMON_TYPES.EMPTY},
-        evolution = "35",
+        evolution = "20",
         bst = "200",
         movelvls = {
             {15, 30},
@@ -5493,7 +5493,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Shuppet",
         type = {PokemonData.POKEMON_TYPES.GHOST, PokemonData.POKEMON_TYPES.EMPTY},
-        evolution = "37",
+        evolution = "18",
         bst = "295",
         movelvls = {
             {5, 8, 13, 16, 20, 23, 28, 31, 35, 38, 43, 46, 50},
@@ -5523,7 +5523,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Duskull",
         type = {PokemonData.POKEMON_TYPES.GHOST, PokemonData.POKEMON_TYPES.EMPTY},
-        evolution = "37",
+        evolution = "14",
         bst = "295",
         movelvls = {
             {6, 9, 14, 17, 22, 25, 30, 33, 38, 41, 46},
@@ -5643,7 +5643,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Spheal",
         type = {PokemonData.POKEMON_TYPES.ICE, PokemonData.POKEMON_TYPES.WATER},
-        evolution = "32",
+        evolution = "14",
         bst = "290",
         movelvls = {
             {7, 13, 19, 25, 31, 37, 37, 43, 49},
@@ -5658,7 +5658,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Sealeo",
         type = {PokemonData.POKEMON_TYPES.ICE, PokemonData.POKEMON_TYPES.WATER},
-        evolution = "44",
+        evolution = "24",
         bst = "410",
         movelvls = {
             {7, 13, 19, 25, 31, 32, 39, 39, 47, 55},
@@ -5763,7 +5763,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Bagon",
         type = {PokemonData.POKEMON_TYPES.DRAGON, PokemonData.POKEMON_TYPES.EMPTY},
-        evolution = "30",
+        evolution = "20",
         bst = "300",
         movelvls = {
             {5, 10, 16, 20, 25, 31, 35, 40, 46, 50, 55},
@@ -5778,7 +5778,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Shelgon",
         type = {PokemonData.POKEMON_TYPES.DRAGON, PokemonData.POKEMON_TYPES.EMPTY},
-        evolution = "50",
+        evolution = "48",
         bst = "420",
         movelvls = {
             {5, 10, 16, 20, 25, 30, 32, 37, 43, 50, 55, 61},
@@ -5808,7 +5808,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Beldum",
         type = {PokemonData.POKEMON_TYPES.STEEL, PokemonData.POKEMON_TYPES.PSYCHIC},
-        evolution = "20",
+        evolution = "14",
         bst = "300",
         movelvls = {
             {},
@@ -5823,7 +5823,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Metang",
         type = {PokemonData.POKEMON_TYPES.STEEL, PokemonData.POKEMON_TYPES.PSYCHIC},
-        evolution = "45",
+        evolution = "30",
         bst = "420",
         movelvls = {
             {20, 20, 24, 28, 32, 36, 40, 44, 48, 52, 56},
@@ -6004,7 +6004,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Turtwig",
         type = {PokemonData.POKEMON_TYPES.GRASS, PokemonData.POKEMON_TYPES.EMPTY},
-        evolution = "18",
+        evolution = "14",
         bst = "318",
         movelvls = {
             {5, 9, 13, 17, 21, 25, 29, 33, 37, 41, 45},
@@ -6019,7 +6019,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Grotle",
         type = {PokemonData.POKEMON_TYPES.GRASS, PokemonData.POKEMON_TYPES.EMPTY},
-        evolution = "32",
+        evolution = "24",
         bst = "405",
         movelvls = {
             {5, 9, 13, 17, 22, 27, 32, 37, 42, 47, 52},
@@ -6064,7 +6064,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Monferno",
         type = {PokemonData.POKEMON_TYPES.FIRE, PokemonData.POKEMON_TYPES.FIGHTING},
-        evolution = "36",
+        evolution = "24",
         bst = "405",
         movelvls = {
             {7, 9, 14, 16, 19, 26, 29, 36, 39, 46, 49},
@@ -6094,7 +6094,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Piplup",
         type = {PokemonData.POKEMON_TYPES.WATER, PokemonData.POKEMON_TYPES.EMPTY},
-        evolution = "16",
+        evolution = "14",
         bst = "314",
         movelvls = {
             {4, 8, 11, 15, 18, 22, 25, 29, 32, 36, 39, 43},
@@ -6109,7 +6109,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Prinplup",
         type = {PokemonData.POKEMON_TYPES.WATER, PokemonData.POKEMON_TYPES.EMPTY},
-        evolution = "36",
+        evolution = "24",
         bst = "405",
         movelvls = {
             {4, 8, 11, 15, 16, 19, 24, 28, 33, 37, 42, 46, 51},
@@ -6154,7 +6154,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Staravia",
         type = {PokemonData.POKEMON_TYPES.NORMAL, PokemonData.POKEMON_TYPES.FLYING},
-        evolution = "34",
+        evolution = "22",
         bst = "340",
         movelvls = {
             {5, 9, 13, 18, 23, 28, 33, 38, 43},
@@ -6244,7 +6244,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Shinx",
         type = {PokemonData.POKEMON_TYPES.ELECTRIC, PokemonData.POKEMON_TYPES.EMPTY},
-        evolution = "15",
+        evolution = "14",
         bst = "263",
         movelvls = {
             {5, 9, 13, 17, 21, 25, 29, 33, 37, 41},
@@ -6259,7 +6259,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Luxio",
         type = {PokemonData.POKEMON_TYPES.ELECTRIC, PokemonData.POKEMON_TYPES.EMPTY},
-        evolution = "30",
+        evolution = "22",
         bst = "363",
         movelvls = {
             {5, 9, 13, 18, 23, 28, 33, 38, 43, 48},
@@ -6320,7 +6320,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Cranidos",
         type = {PokemonData.POKEMON_TYPES.ROCK, PokemonData.POKEMON_TYPES.EMPTY},
-        evolution = "30",
+        evolution = "20",
         bst = "350",
         movelvls = {
             {6, 10, 15, 19, 24, 28, 33, 37, 43},
@@ -6350,7 +6350,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Shieldon",
         type = {PokemonData.POKEMON_TYPES.ROCK, PokemonData.POKEMON_TYPES.STEEL},
-        evolution = "30",
+        evolution = "20",
         bst = "350",
         movelvls = {
             {6, 10, 15, 19, 24, 28, 33, 37, 43},
@@ -6470,7 +6470,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Buizel",
         type = {PokemonData.POKEMON_TYPES.WATER, PokemonData.POKEMON_TYPES.EMPTY},
-        evolution = "26",
+        evolution = "20",
         bst = "330",
         movelvls = {
             {3, 6, 10, 15, 21, 28, 36, 45},
@@ -6500,7 +6500,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Cherubi",
         type = {PokemonData.POKEMON_TYPES.GRASS, PokemonData.POKEMON_TYPES.EMPTY},
-        evolution = "25",
+        evolution = "18",
         bst = "275",
         movelvls = {
             {7, 10, 13, 19, 22, 28, 31, 37, 40},
@@ -6530,7 +6530,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Shellos W",
         type = {PokemonData.POKEMON_TYPES.WATER, PokemonData.POKEMON_TYPES.EMPTY},
-        evolution = "30",
+        evolution = "20",
         bst = "325",
         movelvls = {
             {2, 4, 7, 11, 16, 22, 29, 37, 46},
@@ -6575,7 +6575,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Drifloon",
         type = {PokemonData.POKEMON_TYPES.GHOST, PokemonData.POKEMON_TYPES.FLYING},
-        evolution = "28",
+        evolution = "20",
         bst = "348",
         movelvls = {
             {6, 11, 14, 17, 22, 27, 27, 30, 33, 38, 43},
@@ -6666,7 +6666,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Glameow",
         type = {PokemonData.POKEMON_TYPES.NORMAL, PokemonData.POKEMON_TYPES.EMPTY},
-        evolution = "38",
+        evolution = "18",
         bst = "310",
         movelvls = {
             {5, 8, 13, 17, 20, 25, 29, 32, 37, 41, 45},
@@ -6712,7 +6712,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Stunky",
         type = {PokemonData.POKEMON_TYPES.POISON, PokemonData.POKEMON_TYPES.DARK},
-        evolution = "34",
+        evolution = "20",
         bst = "329",
         movelvls = {
             {4, 7, 11, 15, 20, 25, 31, 37, 44},
@@ -6742,7 +6742,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Bronzor",
         type = {PokemonData.POKEMON_TYPES.STEEL, PokemonData.POKEMON_TYPES.PSYCHIC},
-        evolution = "33",
+        evolution = "20",
         bst = "300",
         movelvls = {
             {7, 12, 14, 19, 26, 30, 35, 37, 41, 49, 52},
@@ -6847,7 +6847,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Gible",
         type = {PokemonData.POKEMON_TYPES.DRAGON, PokemonData.POKEMON_TYPES.GROUND},
-        evolution = "24",
+        evolution = "20",
         bst = "300",
         movelvls = {
             {3, 7, 13, 15, 19, 25, 27, 31, 37},
@@ -6939,7 +6939,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Hippopotas",
         type = {PokemonData.POKEMON_TYPES.GROUND, PokemonData.POKEMON_TYPES.EMPTY},
-        evolution = "34",
+        evolution = "20",
         bst = "330",
         movelvls = {
             {7, 13, 19, 25, 31, 37, 44, 50},
@@ -6969,7 +6969,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Skorupi",
         type = {PokemonData.POKEMON_TYPES.POISON, PokemonData.POKEMON_TYPES.BUG},
-        evolution = "40",
+        evolution = "20",
         bst = "330",
         movelvls = {
             {6, 12, 17, 23, 28, 34, 39, 45, 50},
@@ -6999,7 +6999,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Croagunk",
         type = {PokemonData.POKEMON_TYPES.POISON, PokemonData.POKEMON_TYPES.FIGHTING},
-        evolution = "37",
+        evolution = "20",
         bst = "300",
         movelvls = {
             {3, 8, 10, 15, 17, 22, 24, 29, 31, 36, 38, 43, 45},
@@ -7044,7 +7044,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Finneon",
         type = {PokemonData.POKEMON_TYPES.WATER, PokemonData.POKEMON_TYPES.EMPTY},
-        evolution = "31",
+        evolution = "18",
         bst = "330",
         movelvls = {
             {6, 10, 13, 17, 22, 26, 29, 33, 38, 42, 45, 49},
@@ -7089,7 +7089,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Snover",
         type = {PokemonData.POKEMON_TYPES.GRASS, PokemonData.POKEMON_TYPES.ICE},
-        evolution = "40",
+        evolution = "20",
         bst = "334",
         movelvls = {
             {5, 9, 13, 17, 21, 26, 31, 36, 41, 46},
@@ -10361,7 +10361,7 @@ PokemonData.ALTERNATE_FORMS = {
             {
                 name = "Burmy S",
                 type = {PokemonData.POKEMON_TYPES.BUG, PokemonData.POKEMON_TYPES.EMPTY},
-                evolution = "20",
+                evolution = "16",
                 bst = "224",
                 movelvls = {
                     {10, 20},
@@ -10376,7 +10376,7 @@ PokemonData.ALTERNATE_FORMS = {
             {
                 name = "Burmy T",
                 type = {PokemonData.POKEMON_TYPES.BUG, PokemonData.POKEMON_TYPES.EMPTY},
-                evolution = "20",
+                evolution = "16",
                 bst = "224",
                 movelvls = {
                     {10, 20},
@@ -10619,7 +10619,7 @@ PokemonData.ALTERNATE_FORMS = {
             {
                 name = "Shellos E",
                 type = {PokemonData.POKEMON_TYPES.WATER, PokemonData.POKEMON_TYPES.EMPTY},
-                evolution = "30",
+                evolution = "20",
                 bst = "325",
                 movelvls = {
                     {2, 4, 7, 11, 16, 22, 29, 37, 46},

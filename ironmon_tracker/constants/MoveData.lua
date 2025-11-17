@@ -4941,7 +4941,7 @@ MoveData.MOVES_MASTER_LIST = {
 		id = "449",
 		name = "Judgment",
 		type = PokemonData.POKEMON_TYPES.NORMAL,
-		power = "100",
+		power = "80",
 		pp = "10",
 		accuracy = "100",
 		category = MoveData.MOVE_CATEGORIES.SPECIAL,
@@ -4965,7 +4965,7 @@ MoveData.MOVES_MASTER_LIST = {
 		pp = "10",
 		accuracy = "90",
 		category = MoveData.MOVE_CATEGORIES.SPECIAL,
-		description = "Inflicts regular damage. Has a 70% chance to raise the user's Special Attack by one stage."
+		description = "Inflicts regular damage. Has a 20% chance to raise the user's Special Attack by one stage."
 	},
 	{
 		id = "452",

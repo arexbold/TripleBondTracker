@@ -1,11 +1,11 @@
 MiscConstants = {}
 
-MiscConstants.TRACKER_VERSION = "pr-v1.1"
+MiscConstants.TRACKER_VERSION = "0.2.1"
 
 MiscConstants.BIZHAWK_VERSION = client.getversion()
 
 MiscConstants.UPDATE_NOTES = {
-    "-- Fixed several incorrect routes and crashes for the Log Viewer when playing Diamond/Pearl."
+    "-- Updates to data and bug fixes leading up to release of Triple Bond. --",
 }
 
 MiscConstants.DEFAULT_SETTINGS = {
