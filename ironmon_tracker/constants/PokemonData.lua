@@ -122,7 +122,7 @@ PokemonData.EVOLUTION_TYPES =
         KINGS_ROCK = "KNG RCK", --King's Rock held item
         CLAMPERL = "DST/DSS",
         SNORUNT = {"20", "20/DWN"},
-        KIRLIA = {"14/DWN", "14"},
+        KIRLIA = {"24/DWN", "24"},
         SLOWPOKE = "20/WTR",
         POLIWHIRL = "RCK/WTR",
         MANTYKE = "RMRAID",
@@ -3047,7 +3047,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Aipom",
         type = {PokemonData.POKEMON_TYPES.NORMAL, PokemonData.POKEMON_TYPES.EMPTY},
-        evolution = "32",
+        evolution = "20",
         bst = "360",
         movelvls = {
             {4, 8, 11, 15, 18, 22, 25, 29, 32, 36, 39, 43},

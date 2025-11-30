@@ -20,6 +20,7 @@ local function MainScreen(initialSettings, initialTracker, initialProgram)
     local hoveringOverLevel = false
     local runEvents = true
     local defeatedLance = false
+    local showingEVs = false
     local mainScreenUIInitializer
     local browsManager
     local statCycleIndex = -1
@@ -628,6 +629,32 @@ local function MainScreen(initialSettings, initialTracker, initialProgram)
                 if statName ~= "HP" and settings.appearance.BLIND_MODE then
                     ui.controls[statName .. "StatNumber"].setText("?")
                 end
+
+                -- Check if EVs are maxed for a stat
+                local displayText
+                local statNumberColor = "Top box text color"
+                
+                if showingEVs and currentPokemon.EVs then
+                    local EVvalue = currentPokemon.EVs[statName] or 0
+                    displayText = EVvalue
+                    if EVvalue == 252 then
+                        statNumberColor = "Max EV color"
+                    else
+                        statNumberColor = "Intermediate text color"
+                    end
+                else
+                    displayText = stat
+                    if statName ~= "HP" and settings.appearance.BLIND_MODE then
+                        displayText = "?"
+                    end
+                    if currentPokemon.EVs and currentPokemon.EVs[statName] == 252 then
+                        statNumberColor = "Max EV color"
+                    end
+                end
+                
+                ui.controls[statName .. "StatNumber"].setText(displayText)
+                ui.controls[statName .. "StatNumber"].setTextColorKey(statNumberColor)
+            
                 local color = DrawingUtils.getNatureColor(statName, currentPokemon.nature)
                 local namePosition = ui.controls[statName .. "StatName"].getPosition()
                 local naturePosition = {
@@ -1231,6 +1258,14 @@ local function MainScreen(initialSettings, initialTracker, initialProgram)
             },
             onHoverInfoEnd
         )
+        local function toggleEVs()
+            if currentPokemon and currentPokemon.owner == program.SELECTED_PLAYERS.PLAYER then
+                showingEVs = not showingEVs
+                program.drawCurrentScreens()
+            end
+        end
+
+        eventListeners.toggleEVListener = JoypadEventListener(settings.controls, "TOGGLE_EVS", toggleEVs)
         hoverListeners.moveHeaderHoverListener =
             HoverEventListener(ui.controls.moveHeaderLearnedText, onMoveHeaderHover, {pokemon = nil}, onHoverInfoEnd)
         eventListeners.optionsIconListener = MouseClickEventListener(ui.controls.gearIcon, openOptionsScreen, nil)

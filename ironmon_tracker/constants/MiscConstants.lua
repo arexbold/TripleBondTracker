@@ -29,12 +29,11 @@ MiscConstants.DEFAULT_SETTINGS = {
     controls = {
         CHANGE_VIEW = "Start",
         LOAD_NEXT_SEED = "A B Start Select",
-        CYCLE_STAT = "L",
-        CYCLE_PREDICTION = "R",
         LOCK_ENEMY = "Y",
         LEFT_EFFECTIVENESS = "L",
         RIGHT_EFFECTIVENESS = "R",
         CYCLE_PARTY = "Select",
+        TOGGLE_EVS = "L",
     },
     battle = {
         AUTO_SWAP_TO_ENEMY = false,
@@ -60,7 +59,8 @@ MiscConstants.DEFAULT_SETTINGS = {
         ["Physical icon color"] = 4294952497,
         ["Special icon color"] = 4286428927,
         ["Gear icon color"] = 4292598747,
-        ["Black"] = 4278190080
+        ["Black"] = 4278190080,
+        ["Max EV color"] = 4294944000
     },
     colorSettings = {
         ["Color move names by type"] = true,

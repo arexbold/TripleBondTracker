@@ -47,12 +47,9 @@ local function PokemonDataReader(initialProgram)
                 {8, {"experience1"}},
                 {10, {"experience2"}},
                 {12, {"friendship", "ability"}},
-                {16, {"HP_EV"}},
-                {18, {"ATK_EV"}},
-                {20, {"DEF_EV"}},
-                {22, {"SPE_EV"}},
-                {24, {"SPA_EV"}},
-                {26, {"SPD_EV"}}
+                {16, {"HP_EV", "ATK_EV"}},
+                {18, {"DEF_EV", "SPE_EV"}},
+                {20, {"SPA_EV", "SPD_EV"}}
             },
             B = {
                 {0, {"move1"}},
