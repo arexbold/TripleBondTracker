@@ -99,12 +99,12 @@ local function TrackerUpdater(initialSettings)
     end
 
     local function updateLatestVersion()
-        local versionURL = "https://api.github.com/repos/arexbold/TripleBondTracker/releases"
+        local versionURL = "https://api.github.com/repos/arexbold/TripleBondTracker/releases/latest"
         local command = "curl " .. versionURL .. " --ssl-no-revoke"
         local response = MiscUtils.runExecuteCommand(command)
         if response ~= nil and response ~= "" then
             -- Get the first release (most recent, including pre-releases)
-            local latestVersionString = string.match(response, '"tag_name":.*"v?(%d+%.%d+%.%d+)"')
+            local latestVersionString = string.match(response, '"tag_name":.*"(%d+%.%d+%.%d+)"')
             latestVersion = parseVersionNumber(latestVersionString)
         end
     end
