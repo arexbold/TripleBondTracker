@@ -42,7 +42,6 @@ local function LogViewerScreen(initialSettings, initialTracker, initialProgram)
     local tabs = {
         "Pok" .. Chars.accentedE .. "mon",
         "Trainers",
-        "Pivots",
         "Gym TMs",
         "Info",
         "Search"
