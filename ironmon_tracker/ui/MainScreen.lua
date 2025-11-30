@@ -637,7 +637,7 @@ local function MainScreen(initialSettings, initialTracker, initialProgram)
                 if showingEVs and currentPokemon.EVs then
                     local EVvalue = currentPokemon.EVs[statName] or 0
                     displayText = EVvalue
-                    if EVvalue == 252 then
+                    if EVvalue == 255 then
                         statNumberColor = "Max EV color"
                     else
                         statNumberColor = "Intermediate text color"
@@ -647,7 +647,7 @@ local function MainScreen(initialSettings, initialTracker, initialProgram)
                     if statName ~= "HP" and settings.appearance.BLIND_MODE then
                         displayText = "?"
                     end
-                    if currentPokemon.EVs and currentPokemon.EVs[statName] == 252 then
+                    if currentPokemon.EVs and currentPokemon.EVs[statName] == 255 then
                         statNumberColor = "Max EV color"
                     end
                 end

@@ -143,6 +143,11 @@ local function TrackerUpdater(initialSettings)
             client.SetSoundOn(wasSoundOn)
         end
 
+        if success then
+            print("Please restart the tracker to complete the update if it errors.")
+            client.reboot()
+        end
+
         return success
     end
 
