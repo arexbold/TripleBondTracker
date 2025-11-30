@@ -1,11 +1,11 @@
 MiscConstants = {}
 
-MiscConstants.TRACKER_VERSION = "0.2.1"
+MiscConstants.TRACKER_VERSION = "0.3.1"
 
 MiscConstants.BIZHAWK_VERSION = client.getversion()
 
 MiscConstants.UPDATE_NOTES = {
-    "-- Updates to data and bug fixes leading up to release of Triple Bond. --",
+    "-- Added an EV toggler view. Press L to toggle EVs. --",
 }
 
 MiscConstants.DEFAULT_SETTINGS = {
