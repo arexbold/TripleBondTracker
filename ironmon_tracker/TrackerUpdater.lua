@@ -76,7 +76,7 @@ local function TrackerUpdater(initialSettings)
             return false
         end
 
-        print("Update completed successfully.")
+        print("Update completed successfully. Restart the tracker.")
         return true
     end
 
@@ -141,11 +141,6 @@ local function TrackerUpdater(initialSettings)
 
         if client.GetSoundOn() ~= wasSoundOn then
             client.SetSoundOn(wasSoundOn)
-        end
-
-        if success then
-            print("Please restart the tracker to complete the update if it errors.")
-            client.reboot()
         end
 
         return success
