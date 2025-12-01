@@ -614,6 +614,30 @@ local function MainScreen(initialSettings, initialTracker, initialProgram)
     local function setUpStats(isEnemy)
         ui.controls.BSTNumber.setText(currentPokemon.bst)
         extraThingsToDraw.nature = {}
+        
+        -- Calculate total EVs
+        -- Place this value in the BST area instead? For the toggle
+        local totalEVs = 0
+        if currentPokemon.EVs then
+            for _, evValue in pairs(currentPokemon.EVs) do
+                totalEVs = totalEVs + (evValue or 0)
+            end
+        end
+
+        if showingEVs then
+            ui.controls.BST.setText("EVs:")
+            ui.controls.BSTNumber.setText(totalEVs)
+            if totalEVs == 510 then
+                ui.controls.BSTNumber.setTextColorKey("Max EV color")
+            else
+                ui.controls.BSTNumber.setTextColorKey("Intermediate text color")
+            end
+        else
+            ui.controls.BST.setText("BST")
+            ui.controls.BSTNumber.setText(currentPokemon.bst)
+            ui.controls.BSTNumber.setTextColorKey("Top box text color")
+        end
+        
         for statName, stat in pairs(currentPokemon.stats) do
             ui.controls[statName .. "StatName"].setTextColorKey("Top box text color")
             ui.controls[statName .. "StatNumber"].setVisibility(not isEnemy)
