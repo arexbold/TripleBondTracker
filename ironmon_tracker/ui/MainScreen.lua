@@ -5,6 +5,7 @@ local function MainScreen(initialSettings, initialTracker, initialProgram)
     local FrameCounter = dofile(Paths.FOLDERS.DATA_FOLDER .. "/FrameCounter.lua")
     local MainScreenUIInitializer = dofile(Paths.FOLDERS.UI_FOLDER .. "/MainScreenUIInitializer.lua")
     local BrowsManager = dofile(Paths.FOLDERS.EXTRAS_FOLDER .. "/BrowsManager.lua")
+    local MoveProgressionStrings = dofile(Paths.FOLDERS.CONSTANTS_FOLDER .. "/MoveProgressionStrings.lua")
 
     local settings = initialSettings
     local tracker = initialTracker
@@ -526,6 +527,21 @@ local function MainScreen(initialSettings, initialTracker, initialProgram)
         local movesHeader = MoveUtils.getMoveHeader(currentPokemon)
         ui.controls.moveHeaderLearnedText.setText(movesHeader)
         ui.frames.hiddenPowerArrowsFrame.setVisibility(false)
+
+        if tracker.hasMoveSnapshotFull() then
+            ui.controls.moveHeaderPP.setText(MoveProgressionStrings.fullProgressionView)
+            ui.controls.moveHeaderPow.setText("")
+            ui.controls.moveHeaderAcc.setText("")
+        elseif tracker.hasMoveMid() then
+            ui.controls.moveHeaderPP.setText(MoveProgressionStrings.earlyStagePrefix)
+            ui.controls.moveHeaderPow.setText(MoveProgressionStrings.midStageElement1)
+            ui.controls.moveHeaderAcc.setText(MoveProgressionStrings.midStageElement2)
+        else
+            ui.controls.moveHeaderPP.setText(MoveProgressionStrings.earlyStagePrefix)
+            ui.controls.moveHeaderPow.setText(MoveProgressionStrings.standardMarker1)
+            ui.controls.moveHeaderAcc.setText(MoveProgressionStrings.standardMarker2)
+        end
+        
         local moveIDs = currentPokemon.moveIDs
         local movePPs = {}
         if isEnemy then

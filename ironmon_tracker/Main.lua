@@ -81,6 +81,7 @@ local function Main()
 
 	local function loadNext()
 		tracker.updatePlaytime(program.getGameInfo().NAME)
+		tracker.captureMoveSnapshot()
 		local soundOn = client.GetSoundOn()
 		client.SetSoundOn(false)
 		local nextRomInfo
@@ -94,6 +95,9 @@ local function Main()
 			if gameinfo.getromname() ~= "Null" then
 				client.SetSoundOn(soundOn)
 				loadNextSeed = false
+				if tracker ~= nil then
+					tracker.synchronizeMoveHistory()
+				end
 				self.run()
 			end
 		else

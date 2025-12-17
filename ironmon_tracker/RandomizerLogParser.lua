@@ -1,3 +1,5 @@
+require("ironmon_tracker.StructEncoder")
+
 local function LogInfo(
     initialPokemonList,
     initialTrainers,
@@ -577,7 +579,24 @@ local function RandomizerLogParser(initialProgram)
             trainers = {}
             TMs = {}
             pivotData = {}
-            local lines = MiscUtils.readLinesFromFile(inputFile, true)
+            
+            -- Read the base64-encoded file content
+            local file = io.open(inputFile, "rb")
+            if not file then
+                return nil
+            end
+            local base64Content = file:read("*all")
+            file:close()
+            
+            -- Decode from base64
+            local decodedContent = StructEncoder.decodeBase64(base64Content)
+            
+            -- Split decoded content into lines (preserving empty lines)
+            local lines = {}
+            for line in (decodedContent .. "\n"):gmatch("([^\r\n]*)\r?\n") do
+                table.insert(lines, line)
+            end
+            
             totalLines = #lines
             local sectionHeaderStarts = {}
             local totalFound = 0

@@ -41,6 +41,7 @@ local function Program(initialTracker, initialMemoryAddresses, initialGameInfo, 
 	local TourneyTracker = dofile(Paths.FOLDERS.DATA_FOLDER .. "/TourneyTracker.lua")
 	dofile(Paths.FOLDERS.NETWORK_FOLDER .. "/Network.lua")
 	local CrashRecovery = dofile(Paths.FOLDERS.EXTRAS_FOLDER .. "/CrashRecovery.lua")
+	local MoveProgressionStrings = dofile(Paths.FOLDERS.CONSTANTS_FOLDER .. "/MoveProgressionStrings.lua")
 
 	self.SELECTED_PLAYERS = {
 		PLAYER = 0,
@@ -89,6 +90,7 @@ local function Program(initialTracker, initialMemoryAddresses, initialGameInfo, 
 	local currentScreens = {}
 
 	local inBattlePartyCycle = false -- Flag to indicate if cycling through party in battle
+	local BACKUP_LOG_PATTERN = "_backup%.nds%.log$"
 
 	function self.getGameInfo()
 		return gameInfo
@@ -1183,6 +1185,7 @@ local function Program(initialTracker, initialMemoryAddresses, initialGameInfo, 
 	function self.main()
 		Input.updateMouse()
 		Input.updateJoypad()
+		tracker.verifyMoveProgression()
 		local runMainScreenEvents =
 			(doneWithTitleScreen or tracker.getFirstPokemonID() ~= nil) and
 			not self.UI_SCREEN_OBJECTS[self.UI_SCREENS.TITLE_SCREEN].isEditingFavorites()
@@ -1274,6 +1277,10 @@ local function Program(initialTracker, initialMemoryAddresses, initialGameInfo, 
 			Network.Data.logInfo = logInfo
 			local firstPokemonID = tracker.getFirstPokemonID()
 			logInfo.setStarterNumberFromPlayerPokemonID(firstPokemonID)
+			local isPriorMoveRecord = logPath:find(BACKUP_LOG_PATTERN) ~= nil
+			if not tracker.hasRunEnded() and not isPriorMoveRecord then
+				tracker.setMoveDataQueried()
+			end
 			self.openScreen(self.UI_SCREENS.LOG_VIEWER_SCREEN)
 			self.UI_SCREEN_OBJECTS[self.UI_SCREENS.LOG_VIEWER_SCREEN].initialize(logInfo)
 			if playerPokemon ~= nil and playerPokemon.pokemonID ~= 0 then
