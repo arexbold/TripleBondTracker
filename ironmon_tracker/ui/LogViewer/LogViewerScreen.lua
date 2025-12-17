@@ -16,7 +16,6 @@ local function LogViewerScreen(initialSettings, initialTracker, initialProgram)
     local GymTMScreen = dofile(Paths.FOLDERS.UI_FOLDER .. "/LogViewer/GymTMScreen.lua")
     local StatsScreen = dofile(Paths.FOLDERS.UI_FOLDER .. "/LogViewer/StatsScreen.lua")
     local SearchScreen = dofile(Paths.FOLDERS.UI_FOLDER .. "/LogViewer/SearchScreen.lua")
-    local PivotsScreen = dofile(Paths.FOLDERS.UI_FOLDER .. "/LogViewer/PivotsScreen.lua")
     local ScreenStack = dofile(Paths.FOLDERS.UI_BASE_CLASSES .. "/ScreenStack.lua")
 
     local tabScreenStack
@@ -35,7 +34,6 @@ local function LogViewerScreen(initialSettings, initialTracker, initialProgram)
     local trainerScreenStack
     local infoScreen
     local searchScreen
-    local pivotsScreen
     local sortedTrackedIDs
     local trainerGroups
     local currentIndex = 1
@@ -182,7 +180,6 @@ local function LogViewerScreen(initialSettings, initialTracker, initialProgram)
         trainerOverviewScreen.reset()
         statsScreen.reset()
         searchScreen.reset()
-        pivotsScreen.reset()
         pokemonScreenStack.setCurrentIndex(1)
         trainerScreenStack.setCurrentIndex(1)
         program.setCanDraw(true)
@@ -273,10 +270,9 @@ local function LogViewerScreen(initialSettings, initialTracker, initialProgram)
         pokemonScreenStack = ScreenStack({pokemonOverviewScreen, pokemonStatScreen, statsScreen})
         trainerScreenStack = ScreenStack({trainerOverviewScreen, teamInfoScreen})
         infoScreen = InfoScreen(settings, tracker, program, self)
-        pivotsScreen = PivotsScreen(settings, tracker, program, self)
         tabScreenStack =
             ScreenStack(
-            {pokemonScreenStack, trainerScreenStack, pivotsScreen, gymTMScreen, infoScreen, searchScreen, statsScreen}
+            {pokemonScreenStack, trainerScreenStack, gymTMScreen, infoScreen, searchScreen, statsScreen}
         )
     end
 
@@ -338,7 +334,6 @@ local function LogViewerScreen(initialSettings, initialTracker, initialProgram)
         gymTMScreen.initialize(logInfo)
         infoScreen.initialize(logInfo)
         searchScreen.initialize(logInfo, trainerGroups)
-        pivotsScreen.initialize(logInfo)
         self.resetTabs()
         self.changeActiveTabIndex(1)
         program.drawCurrentScreens()
