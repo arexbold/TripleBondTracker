@@ -11,6 +11,8 @@ If you're looking for the ACTUAL NDS Ironmon Tracker go here: [release page](htt
 ## Controls
 **Select Button**: While in/out of battle you can cycle between your party members.
 
+**L Button**: Toggle EV window.
+
 **Start Button**: Only while in battle you can cycle between the enemy mon and your active mon.
 
 
@@ -21,11 +23,11 @@ If you're looking for the ACTUAL NDS Ironmon Tracker go here: [release page](htt
 2. Download this tracker from the [releases](https://github.com/arexbold/TripleBondTracker/releases/) section.
 3. Unzip the tracker's files to a location of your choosing. One good location is the `Lua` folder where you installed BizHawk. Make sure the "ironmon_tracker" folder is in the same directory as "Ironmon_Tracker.lua".
 4. Load your ROM into [BizHawk](https://tasvideos.org/BizHawk/ReleaseHistory).
-5. Open the Lua Console (Tools -> Lua Console). Click on the folder icon and open `Ironmon_Tracker.lua` in the location you extracted it to.
-   - If you installed the tracker in Bizhawk's `Lua` folder, this location is shown by default and you should see the `Ironmon_Tracker.lua` file right away.
-6. Make sure you do the correct settings in the New Run Settings. The ROM to randomize is the PATCHED rom after you use this [patch](https://github.com/arexbold/TripleBondChallenge/releases/)
-7. Once they're set, do your New Run Combo to randomize your first seed.
-## <img width="375" height="803" alt="image" src="https://github.com/user-attachments/assets/5f6f07d9-c482-4e06-9351-b71d933cce01" />
+5. Open the Lua Console (Tools -> Lua Console). Click on the folder icon and open `Triplebond-Tracker.lua` in the location you extracted it to.
+   - If you installed the tracker in Bizhawk's `Lua` folder, this location is shown by default and you should see the `Triplebond-Tracker.lua` file right away.
+6. Setup the New Run Settings in the Tracker to set your ROM to randomize, Randomizer JAR, and Settings file.
+7. Once they're set, press and hold A + B + Start + Select to do your first run. Use the same combo to start a new run.
+image here
 
 
 ### Compatibility
