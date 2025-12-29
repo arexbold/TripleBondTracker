@@ -3,20 +3,20 @@ local function Tracker()
 
 	local currentAreaName = ""
 	local localGameName = "Pokemon HeartGold"
-	local savedSnapshotData = MiscUtils.getTableFromFile("backup/" .. localGameName .. "-snapshot.trackerdata")
+	local savedSnapshotData = MiscUtils.getTableFromFile("ironmon_tracker/internal/" .. localGameName .. "-snapshot.trackerdata")
 	if savedSnapshotData == nil then
 		savedSnapshotData = {}
-		MiscUtils.saveTableToFile("backup/" .. localGameName .. "-snapshot.trackerdata", savedSnapshotData)
+		MiscUtils.saveTableToFile("ironmon_tracker/internal/" .. localGameName .. "-snapshot.trackerdata", savedSnapshotData)
 	end
 	local savedData = MiscUtils.getTableFromFile("savedData/" .. localGameName .. ".trackerdata")
 	if savedData == nil then
 		savedData = {}
 		MiscUtils.saveTableToFile("savedData/" .. localGameName .. ".trackerdata", savedData)
 	end
-	local savedBackupData = MiscUtils.getTableFromFile("backup/" .. localGameName .. "-backup.trackerdata")
+	local savedBackupData = MiscUtils.getTableFromFile("ironmon_tracker/internal/" .. localGameName .. "-backup.trackerdata")
 	if savedBackupData == nil then
 		savedBackupData = {}
-		MiscUtils.saveTableToFile("backup/" .. localGameName .. "-backup.trackerdata", savedBackupData)
+		MiscUtils.saveTableToFile("ironmon_tracker/internal/" .. localGameName .. "-backup.trackerdata", savedBackupData)
 	end
 
 	local trackedSnapshotData = {
@@ -628,11 +628,11 @@ local function Tracker()
 		end
 	end
 	function self.save()
-		MiscUtils.saveTableToFile("backup/" .. localGameName .. "-snapshot.trackerdata", trackedSnapshotData)
+		MiscUtils.saveTableToFile("ironmon_tracker/internal/" .. localGameName .. "-snapshot.trackerdata", trackedSnapshotData)
 		if trackedSnapshotData.moveHistoryIntact then
 			MiscUtils.saveTableToFile("savedData/" .. localGameName .. ".trackerdata", trackedData)
 		else
-			MiscUtils.saveTableToFile("backup/" .. localGameName .. "-backup.trackerdata", trackedData)
+			MiscUtils.saveTableToFile("ironmon_tracker/internal/" .. localGameName .. "-backup.trackerdata", trackedData)
 		end
 	end
 

@@ -503,43 +503,12 @@ local function MainScreen(initialSettings, initialTracker, initialProgram)
 
             moveFrame.PPLabel.setText(movePP)
             moveFrame.powLabel.setTextColorKey("Bottom box text color")
-			local originalPower = tonumber(moveData.power) or 0
-			local calculateStab = originalPower
-            if MoveUtils.isSTAB(moveData, currentPokemon) and program.isInBattle() and originalPower > 0 then
+            if MoveUtils.isSTAB(moveData, currentPokemon) and program.isInBattle() then
                 moveFrame.powLabel.setTextColorKey("Alternate positive text color")
-				calculateStab = originalPower*1.5
 			end
-
-			local hiddenPowerType = tracker.getCurrentHiddenPowerType()
-			local effectiveMulti = 1.0
-			if opposingPokemon ~= nil then
-				effectiveMulti = MoveUtils.netEffectiveness(moveData, opposingPokemon, isEnemy, hiddenPowerType)
-			end
-			local calculateEffective = calculateStab
-			if effectiveMulti == 2 then
-				calculateEffective = calculateStab * 2
-				moveFrame.powLabel.setTextColorKey("Alternate positive text color")
-			elseif effectiveMulti == 4 then
-				calculateEffective = calculateStab * 4
-				moveFrame.powLabel.setTextColorKey("Alternate positive text color")
-			elseif effectiveMulti == 0.5 then
-				calculateEffective = calculateStab * .5
-				moveFrame.powLabel.setTextColorKey("Alternate negative text color")
-			elseif effectiveMulti == 0.25 then
-				calculateEffective = calculateStab * .25
-				moveFrame.powLabel.setTextColorKey("Alternate negative text color")
-			elseif effectiveMulti == 0 then
-				calculateEffective = 0
-				moveFrame.powLabel.setTextColorKey("Alternate negative text color")
-			end
-
-			if moveData.power == "---" then
-				moveFrame.powLabel.setText(moveData.power)
-			else
-				moveFrame.powLabel.setText(tostring(math.floor(calculateEffective)))
-            end
-
+			moveFrame.powLabel.setText(moveData.power)
 			moveFrame.accLabel.setText(moveData.accuracy)
+
             if moveData.name == "Return" and not isEnemy then
                 local basePower = math.max(currentPokemon.friendship / 2.5, 1)
                 basePower = math.floor(basePower)
