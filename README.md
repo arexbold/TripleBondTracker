@@ -18,7 +18,7 @@ If you're looking for the ACTUAL NDS Ironmon Tracker go here: [release page](htt
 
 ## Installation
 
-1. If you don't have BizHawk, [download the emulator](https://tasvideos.org/BizHawk/ReleaseHistory) (v2.8 or higher).
+1. If you don't have BizHawk, [download the emulator](https://github.com/TASEmulators/BizHawk/releases/tag/2.10)
    - **IMPORTANT**: **Run BizHawk once and close it.**  This creates a config file in BizHawk's folder that ensures the tracker will work correctly. If you don't do 			this, errors may occur.
 2. Download this tracker from the [releases](https://github.com/arexbold/TripleBondTracker/releases/) section.
 3. Unzip the tracker's files to a location of your choosing. One good location is the `Lua` folder where you installed BizHawk. Make sure the "ironmon_tracker" folder is in the same directory as "Ironmon_Tracker.lua".
