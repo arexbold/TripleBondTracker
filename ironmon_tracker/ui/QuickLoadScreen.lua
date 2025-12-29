@@ -538,19 +538,19 @@ local function TrackerSetupScreen(initialSettings, initialTracker, initialProgra
                 settingKey = "ROM_PATH",
                 labelName = "ROM to randomize",
                 extension = ".nds",
-                relativePath = ""
+                relativePath = Paths.SLASH .. "loader"
             },
             {
                 settingKey = "JAR_PATH",
                 labelName = "Randomizer JAR",
                 extension = ".jar",
-                relativePath = ""
+                relativePath = Paths.SLASH .. "loader"
             },
             {
                 settingKey = "SETTINGS_PATH",
                 labelName = "Settings file",
                 extension = ".rnqs",
-                relativePath = Paths.SLASH .. "ironmon_tracker" .. Paths.SLASH .. "settings"
+                relativePath = Paths.SLASH .. "loader"
             }
         }
         for _, settingData in pairs(settingsData) do

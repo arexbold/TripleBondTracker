@@ -1,11 +1,11 @@
 MiscConstants = {}
 
-MiscConstants.TRACKER_VERSION = "0.3.1"
+MiscConstants.TRACKER_VERSION = "1.0.0"
 
 MiscConstants.BIZHAWK_VERSION = client.getversion()
 
 MiscConstants.UPDATE_NOTES = {
-    "-- Added an EV toggler view. Press L to toggle EVs. --",
+    "-- Release version. --",
 }
 
 MiscConstants.DEFAULT_SETTINGS = {
