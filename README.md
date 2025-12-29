@@ -18,7 +18,7 @@ If you're looking for the ACTUAL NDS Ironmon Tracker go here: [release page](htt
 
 ## Installation
 
-**Installation Tutorial Video: [https://youtu.be/JEbL4Elem0o](https://youtu.be/JEbL4Elem0o)
+**Installation Tutorial Video: [https://youtu.be/JEbL4Elem0o](https://youtu.be/JEbL4Elem0o)**
 
 1. If you don't have BizHawk, [download the emulator](https://github.com/TASEmulators/BizHawk/releases/tag/2.10)
    - **IMPORTANT**: **Run BizHawk once and close it.**  This creates a config file in BizHawk's folder that ensures the tracker will work correctly. If you don't do 			this, errors may occur.
