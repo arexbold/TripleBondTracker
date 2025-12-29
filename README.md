@@ -18,6 +18,8 @@ If you're looking for the ACTUAL NDS Ironmon Tracker go here: [release page](htt
 
 ## Installation
 
+**Installation Tutorial Video: [https://youtu.be/JEbL4Elem0o](https://youtu.be/JEbL4Elem0o)
+
 1. If you don't have BizHawk, [download the emulator](https://github.com/TASEmulators/BizHawk/releases/tag/2.10)
    - **IMPORTANT**: **Run BizHawk once and close it.**  This creates a config file in BizHawk's folder that ensures the tracker will work correctly. If you don't do 			this, errors may occur.
 2. Download this tracker from the [releases](https://github.com/arexbold/TripleBondTracker/releases/) section.
@@ -27,7 +29,8 @@ If you're looking for the ACTUAL NDS Ironmon Tracker go here: [release page](htt
    - If you installed the tracker in Bizhawk's `Lua` folder, this location is shown by default and you should see the `Triplebond-Tracker.lua` file right away.
 6. Setup the New Run Settings in the Tracker to set your ROM to randomize, Randomizer JAR, and Settings file.
 7. Once they're set, press and hold A + B + Start + Select to do your first run. Use the same combo to start a new run.
-image here
+<img width="355" height="787" alt="image" src="https://github.com/user-attachments/assets/2f48bb8b-f45d-4b1a-bbd4-f1f2cf0099ec" />
+
 
 
 ### Compatibility
