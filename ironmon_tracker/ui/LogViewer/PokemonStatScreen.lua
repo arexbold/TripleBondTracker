@@ -267,6 +267,7 @@ local function PokemonStatScreen(initialSettings, initialTracker, initialProgram
         pokemon = logPokemon[currentID]
         movesScrollBar.setItems(pokemon.moves)
         local dataSet = logViewerScreen.readStats(pokemon)
+        local dataExtras = logViewerScreen.readExtras(pokemon, dataSet)
         readGymTMs(pokemon)
         readAbilitiesIntoUI(pokemon)
         local pokemonImageListener = hoverListeners.pokemonImageListener
@@ -276,6 +277,7 @@ local function PokemonStatScreen(initialSettings, initialTracker, initialProgram
         local heading = "Base Stats (" .. pokemon.bst .. " total)"
         ui.controls.statBarGraph.setDataSet(dataSet)
         ui.controls.statBarGraph.setHeadingText(heading)
+        ui.controls.statBarGraph.setExtras(dataExtras)
         currentEvoList = pokemon.evolutions
         currentEvoIndex = 1
         readCurrentEvoIntoUI()

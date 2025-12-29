@@ -506,7 +506,7 @@ MoveData.MOVES_MASTER_LIST = {
 		pp = "20",
 		accuracy = "85",
 		category = MoveData.MOVE_CATEGORIES.PHYSICAL,
-		description = "Inflicts regular damage and makes contact. User takes 1/4 the damage it inflicts in recoil."
+		description = "Inflicts regular damage and makes contact. User takes 1/7 the damage it inflicts in recoil."
 	},
 	{
 		id = "37",
@@ -526,7 +526,7 @@ MoveData.MOVES_MASTER_LIST = {
 		pp = "15",
 		accuracy = "100",
 		category = MoveData.MOVE_CATEGORIES.PHYSICAL,
-		description = "Inflicts regular damage and makes contact. User takes 1/3 the damage it inflicts in recoil."
+		description = "Inflicts regular damage and makes contact. User takes 1/5 the damage it inflicts in recoil."
 	},
 	{
 		id = "39",
@@ -821,7 +821,7 @@ MoveData.MOVES_MASTER_LIST = {
 		pp = "25",
 		accuracy = "80",
 		category = MoveData.MOVE_CATEGORIES.PHYSICAL,
-		description = "Inflicts regular damage and makes contact. User takes 1/4 the damage it inflicts in recoil."
+		description = "Inflicts regular damage and makes contact. User takes 1/7 the damage it inflicts in recoil."
 	},
 	{
 		id = "67",
@@ -3823,7 +3823,7 @@ MoveData.MOVES_MASTER_LIST = {
 		pp = "15",
 		accuracy = "100",
 		category = MoveData.MOVE_CATEGORIES.PHYSICAL,
-		description = "Inflicts regular damage and makes contact. User takes 1/3 the damage it inflicts in recoil. Has a 10% chance to paralyze the target."
+		description = "Inflicts regular damage and makes contact. User takes 1/5 the damage it inflicts in recoil. Has a 10% chance to paralyze the target."
 	},
 	{
 		id = "345",
@@ -4383,7 +4383,7 @@ MoveData.MOVES_MASTER_LIST = {
 		pp = "15",
 		accuracy = "100",
 		category = MoveData.MOVE_CATEGORIES.PHYSICAL,
-		description = "Inflicts regular damage and makes contact. User takes 1/3 the damage it inflicts in recoil. Has a 10% chance to burn the target. Frozen Pok" ..
+		description = "Inflicts regular damage and makes contact. User takes 1/5 the damage it inflicts in recoil. Has a 10% chance to burn the target. Frozen Pok" ..
 			Chars.accentedE .. "mon will thaw if they use this move."
 	},
 	{
@@ -4574,7 +4574,7 @@ MoveData.MOVES_MASTER_LIST = {
 		pp = "15",
 		accuracy = "100",
 		category = MoveData.MOVE_CATEGORIES.PHYSICAL,
-		description = "Inflicts regular damage and makes contact. User takes 1/3 the damage it inflicts in recoil."
+		description = "Inflicts regular damage and makes contact. User takes 1/5 the damage it inflicts in recoil."
 	},
 	{
 		id = "414",
@@ -4975,7 +4975,7 @@ MoveData.MOVES_MASTER_LIST = {
 		pp = "15",
 		accuracy = "100",
 		category = MoveData.MOVE_CATEGORIES.PHYSICAL,
-		description = "Inflicts regular damage and makes contact. User takes 1/3 the damage it inflicts in recoil."
+		description = "Inflicts regular damage and makes contact. User takes 1/5 the damage it inflicts in recoil."
 	},
 	{
 		id = "453",
@@ -5025,7 +5025,7 @@ MoveData.MOVES_MASTER_LIST = {
 		pp = "5",
 		accuracy = "80",
 		category = MoveData.MOVE_CATEGORIES.PHYSICAL,
-		description = "Inflicts regular damage and makes contact. User takes 1/2 the damage it inflicts in recoil."
+		description = "Inflicts regular damage and makes contact. User takes 1/3 the damage it inflicts in recoil."
 	},
 	{
 		id = "458",

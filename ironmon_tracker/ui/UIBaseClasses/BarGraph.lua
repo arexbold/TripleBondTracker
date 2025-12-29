@@ -7,7 +7,8 @@ local function BarGraph(
     initialGraphPadding,
     initialMaxValue,
     initialOrientation,
-    initialHorizontalNamePadding)
+    initialHorizontalNamePadding,
+    initialExtras)
     local self = {}
     local component = initialComponent
     local dataSet = initialDataSet
@@ -19,6 +20,7 @@ local function BarGraph(
     local horizontalNamePadding = initialHorizontalNamePadding
     local visible = true
     local orientation = initialOrientation or Graphics.ALIGNMENT_TYPE.VERTICAL
+    local extras = initialExtras or {}
 
     function self.setDataSet(newDataSet)
         dataSet = MiscUtils.shallowCopy(newDataSet)
@@ -26,6 +28,10 @@ local function BarGraph(
 
     function self.setHeadingText(newHeadingText)
         headingText = newHeadingText
+    end
+
+    function self.setExtras(newExtras)
+        extras = MiscUtils.shallowCopy(newExtras)
     end
 
     function self.calculateActualPosition(position)
@@ -42,7 +48,8 @@ local function BarGraph(
                 borderColorKey,
                 textBarColorKey,
                 padding,
-                maxValue
+                maxValue,
+                extras
             )
         else
             DrawingUtils.drawHorizontalBarGraph(
@@ -54,7 +61,8 @@ local function BarGraph(
                 textBarColorKey,
                 padding,
                 maxValue,
-                horizontalNamePadding
+                horizontalNamePadding,
+                extras
             )
         end
     end

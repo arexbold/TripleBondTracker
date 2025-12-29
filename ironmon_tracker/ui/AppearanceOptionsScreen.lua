@@ -114,9 +114,6 @@ local function AppearanceOptionsScreen(initialSettings, initialTracker, initialP
             "AUTO_POKEMON_THEMES",
             "EXPERIENCE_BAR",
             "RANDOM_BALL_PICKER",
-            "REPEL_ICON",
-            "RIGHT_JUSTIFIED_NUMBERS",
-            "SHOW_POKECENTER_HEALS",
             "SHOW_ACCURACY_AND_EVASION",
             "SHOW_NICKNAME",
             "BAG_HEALS_SHOW_HP_INSTEAD"

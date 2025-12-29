@@ -442,7 +442,7 @@ local function Program(initialTracker, initialMemoryAddresses, initialGameInfo, 
 		local seconds = os.time()
 		local pastRun = PastRun(date, seconds, playerPokemon, enemyPokemon, location, badges, progress)
 		seedLogger.logRun(pastRun)
-		tracker.updatePlaytime(gameInfo.NAME)
+		tracker.updatePlaytime()
 		local runOverMessage = seedLogger.getRandomRunOverMessage(pastRun)
 		self.UI_SCREEN_OBJECTS[self.UI_SCREENS.RUN_OVER_SCREEN].initialize(runOverMessage)
 		self.openScreen(self.UI_SCREENS.RUN_OVER_SCREEN)
@@ -1185,7 +1185,6 @@ local function Program(initialTracker, initialMemoryAddresses, initialGameInfo, 
 	function self.main()
 		Input.updateMouse()
 		Input.updateJoypad()
-		tracker.verifyMoveProgression()
 		local runMainScreenEvents =
 			(doneWithTitleScreen or tracker.getFirstPokemonID() ~= nil) and
 			not self.UI_SCREEN_OBJECTS[self.UI_SCREENS.TITLE_SCREEN].isEditingFavorites()
@@ -1212,8 +1211,8 @@ local function Program(initialTracker, initialMemoryAddresses, initialGameInfo, 
 
 	-- Closes down the Tracker, saves data, and shuts down any additional processes
 	function self.onProgramExit()
-		tracker.save(gameInfo.NAME)
-		tracker.updatePlaytime(gameInfo.NAME)
+		tracker.save()
+		tracker.updatePlaytime()
 		client.saveram()
 		forms.destroyall()
 		self.onExitAndCloseRequiredProcesses()
@@ -1278,13 +1277,14 @@ local function Program(initialTracker, initialMemoryAddresses, initialGameInfo, 
 			local firstPokemonID = tracker.getFirstPokemonID()
 			logInfo.setStarterNumberFromPlayerPokemonID(firstPokemonID)
 			local isPriorMoveRecord = logPath:find(BACKUP_LOG_PATTERN) ~= nil
-			if not tracker.hasRunEnded() and not isPriorMoveRecord then
+			if not isPriorMoveRecord then
 				tracker.setMoveDataQueried()
 			end
 			self.openScreen(self.UI_SCREENS.LOG_VIEWER_SCREEN)
 			self.UI_SCREEN_OBJECTS[self.UI_SCREENS.LOG_VIEWER_SCREEN].initialize(logInfo)
 			if playerPokemon ~= nil and playerPokemon.pokemonID ~= 0 then
 				local logScreen = self.UI_SCREEN_OBJECTS[self.UI_SCREENS.LOG_VIEWER_SCREEN]
+				logScreen.setFirstPokemon(playerPokemon)
 				logScreen.addGoBackFunction(logScreen.goBackToOverview)
 				logScreen.loadPokemonStats(playerPokemon.pokemonID)
 			end

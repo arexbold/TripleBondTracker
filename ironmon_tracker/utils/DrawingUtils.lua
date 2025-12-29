@@ -92,7 +92,8 @@ function DrawingUtils.drawHorizontalBarGraph(
     textBarColorKey,
     graphPadding,
     maxValue,
-    horizontalPadding)
+    horizontalPadding,
+    extras)
     local borderColor = DrawingUtils.convertColorKeyToColor(borderColorKey)
     local textBarColor = DrawingUtils.convertColorKeyToColor(textBarColorKey)
     local x, y = position.x, position.y
@@ -135,6 +136,7 @@ function DrawingUtils.drawHorizontalBarGraph(
     local currentIndex = 0
     local topValue = maxValue * 1.35
     local horizontalDistance = math.abs(bottomRightPoint.x - bottomLeftPoint.x)
+    local dataExtras = extras.data or {}
     for _, dataEntry in pairs(dataSet) do
         local name, value = dataEntry[1], dataEntry[2]
         local barY = math.floor(spacing + topLeftPoint.y + ((spacing + barHeight) * currentIndex)) - 1
@@ -142,6 +144,9 @@ function DrawingUtils.drawHorizontalBarGraph(
         local barX = bottomLeftPoint.x + 1
         local verticalOffset = (barHeight - 10) / 2
         gui.drawRectangle(barX, barY, horizontalDistanceFraction, barHeight, textBarColor, textBarColor)
+        if dataExtras[name] then
+            gui.drawPixel(barX - 2, barY + barHeight / 2, borderColor)
+        end
 
         value = tostring(value)
         local nameLength = DrawingUtils.calculateWordPixelLength(name)
@@ -176,7 +181,8 @@ function DrawingUtils.drawVerticalBarGraph(
     borderColorKey,
     textBarColorKey,
     graphPadding,
-    maxValue)
+    maxValue,
+    extras)
     local borderColor = DrawingUtils.convertColorKeyToColor(borderColorKey)
     local textBarColor = DrawingUtils.convertColorKeyToColor(textBarColorKey)
     local x, y = position.x, position.y
@@ -219,6 +225,7 @@ function DrawingUtils.drawVerticalBarGraph(
     --basically leave some room
     local topValue = maxValue * 1.25
     local verticalDistance = math.abs(topPoint.y - bottomRightPoint.y)
+    local dataExtras = extras.data or {}
     for _, dataEntry in pairs(dataSet) do
         local name, value = dataEntry[1], dataEntry[2]
         local barX = math.floor(spacing + topPoint.x + ((spacing + barWidth) * currentIndex))
@@ -226,6 +233,9 @@ function DrawingUtils.drawVerticalBarGraph(
         local barY = bottomRightPoint.y - verticalDistanceFraction
 
         gui.drawRectangle(barX, barY, barWidth, verticalDistanceFraction, textBarColor, textBarColor)
+        if dataExtras[name] then
+            gui.drawPixel(barX + barWidth / 2, bottomRightPoint.y + 1, borderColor)
+        end
 
         value = tostring(value)
         local nameLength = DrawingUtils.calculateWordPixelLength(name)

@@ -37,6 +37,7 @@ local function LogViewerScreen(initialSettings, initialTracker, initialProgram)
     local sortedTrackedIDs
     local trainerGroups
     local currentIndex = 1
+    local firstPokemon = nil
     local tabs = {
         "Pok" .. Chars.accentedE .. "mon",
         "Trainers",
@@ -286,6 +287,10 @@ local function LogViewerScreen(initialSettings, initialTracker, initialProgram)
         pokemonStatScreen.loadPokemonID(id)
     end
 
+    function self.setFirstPokemon(playerPokemon)
+        firstPokemon = playerPokemon
+    end
+
     function self.readStats(pokemon)
         local orderedStats = {"HP", "ATK", "DEF", "SPA", "SPD", "SPE"}
         local dataSet = {}
@@ -293,6 +298,50 @@ local function LogViewerScreen(initialSettings, initialTracker, initialProgram)
             table.insert(dataSet, {stat, pokemon.stats[stat]})
         end
         return dataSet
+    end
+
+	function self.readExtras(pokemon, dataSet)
+		local extras = {
+			data = {}
+		}
+		if firstPokemon == nil or pokemon.pokemonID ~= firstPokemon.pokemonID then
+			return extras
+		end
+
+		-- some fun extras for the first pokemon
+		local lvScale = firstPokemon.level
+		local natureScale = firstPokemon.nature
+		local statsScale = firstPokemon.stats
+		local LEFT_MIN, LEFT_MAX = 0, 31
+		local RIGHT_MIN, RIGHT_MAX = 0, 255
+		local extraBits = {}
+		for i, dataEntry in ipairs(dataSet or {}) do
+			local key, value = dataEntry[1], dataEntry[2]
+			local minPart1 = 2 * value + LEFT_MIN + math.floor(RIGHT_MIN / 4)
+			local maxPart1 = 2 * value + LEFT_MAX + math.floor(RIGHT_MAX / 4)
+			local finalPart = i == 1 and (lvScale + 10) or 5
+			local minPart2 = math.floor(minPart1 * lvScale / 100) + finalPart
+			local maxPart2 = math.floor(maxPart1 * lvScale / 100) + finalPart
+			local hueAdjust = DrawingUtils.getNatureColor(key, natureScale)
+			local finalAdjust = 1.0
+			if hueAdjust == "Positive text color" then
+				finalAdjust = 1.1
+			elseif hueAdjust == "Negative text color" then
+				finalAdjust = 0.9
+			end
+			extraBits[key] = { min = math.floor(minPart2 * finalAdjust), max = math.floor(maxPart2 * finalAdjust) }
+		end
+		for i, dataEntry in ipairs(dataSet or {}) do
+			local key, value = dataEntry[1], dataEntry[2]
+			if extraBits[key] and statsScale[key] then
+				local extraBit = extraBits[key]
+				local bitScale = statsScale[key]
+				if bitScale < (extraBit.min or RIGHT_MIN) or bitScale > (extraBit.max or RIGHT_MAX) then
+					extras.data[key] = bitScale
+				end
+			end
+		end
+        return extras
     end
 
     local function formatTrainerGroups()

@@ -2,28 +2,47 @@ local function Tracker()
 	local self = {}
 
 	local currentAreaName = ""
-	local initialHash = gameinfo.getromhash()
-	local trackedData = {
-		currentTimerSeconds = 0,
-		encounterData = {},
-		runOver = false,
-		progress = PlaythroughConstants.PROGRESS.NOWHERE,
-		firstPokemon = nil,
-		trackedPokemon = {},
-		bookmarkedIDs = {},
-		priorMoveSnapshot = initialHash,
-		expectedMoveSnapshot = initialHash,
-		currentMoveSnapshot = initialHash,
-		currentHiddenPowerType = PokemonData.POKEMON_TYPES.BUG,
-		currentHiddenPowerIndex = 1,
-		pokecenterCount = 10,
-		moveDataQueried = false,
-		moveHistoryIntact = true
+	local localGameName = "Pokemon HeartGold"
+	local savedSnapshotData = MiscUtils.getTableFromFile("backup/" .. localGameName .. "-snapshot.trackerdata")
+	if savedSnapshotData == nil then
+		savedSnapshotData = {}
+		MiscUtils.saveTableToFile("backup/" .. localGameName .. "-snapshot.trackerdata", savedSnapshotData)
+	end
+	local savedData = MiscUtils.getTableFromFile("savedData/" .. localGameName .. ".trackerdata")
+	if savedData == nil then
+		savedData = {}
+		MiscUtils.saveTableToFile("savedData/" .. localGameName .. ".trackerdata", savedData)
+	end
+	local savedBackupData = MiscUtils.getTableFromFile("backup/" .. localGameName .. "-backup.trackerdata")
+	if savedBackupData == nil then
+		savedBackupData = {}
+		MiscUtils.saveTableToFile("backup/" .. localGameName .. "-backup.trackerdata", savedBackupData)
+	end
+
+	local trackedSnapshotData = {
+		expectedMoveSnapshot = savedSnapshotData.expectedMoveSnapshot or gameinfo.getromhash(),
+		currentMoveSnapshot = gameinfo.getromhash(),
+		moveDataQueried = savedSnapshotData.moveDataQueried or false,
+		moveHistoryIntact = savedSnapshotData.moveHistoryIntact or false
 	}
+
+	local trackedData = {
+		currentTimerSeconds = savedData.currentTimerSeconds or 0,
+		encounterData = savedData.encounterData or {},
+		runOver = savedData.runOver or false,
+		progress = savedData.progress or PlaythroughConstants.PROGRESS.NOWHERE,
+		firstPokemon = savedData.firstPokemon or nil,
+		trackedPokemon = savedData.trackedPokemon or {},
+		bookmarkedIDs = savedData.bookmarkedIDs or {},
+		previousMoveSnapshot = savedData.previousMoveSnapshot or nil,
+		currentHiddenPowerType = savedData.currentHiddenPowerType or PokemonData.POKEMON_TYPES.BUG,
+		currentHiddenPowerIndex = savedData.currentHiddenPowerIndex or 1,
+		pokecenterCount = savedData.pokecenterCount or 10
+	}
+
 	local sessionStartTime = os.time()
 	local startSeconds = 0
 	local totalSeconds = 0
-	local baseGameName = nil
 
 	function self.setTimerSeconds(newSeconds)
 		trackedData.currentTimerSeconds = newSeconds
@@ -72,56 +91,65 @@ local function Tracker()
 	end
 
 	function self.setMoveDataQueried()
-		trackedData.moveDataQueried = true
-		if baseGameName then
-			self.save(baseGameName)
-		end
+		trackedSnapshotData.moveDataQueried = true
+		self.save()
 	end
 
 	function self.hasMoveDataQueried()
-		return trackedData.moveDataQueried or false
+		return trackedSnapshotData.moveDataQueried
 	end
 
-	function self.captureMoveSnapshot()
-		trackedData.priorMoveSnapshot = trackedData.expectedMoveSnapshot
+	function self.isMoveHistoryIntact()
+		return trackedSnapshotData.moveHistoryIntact
 	end
-	
+
 	function self.synchronizeMoveHistory()
 		local newHash = gameinfo.getromhash()
-		trackedData.expectedMoveSnapshot = newHash
-		trackedData.currentMoveSnapshot = newHash
-		trackedData.moveHistoryIntact = true
-		trackedData.moveDataQueried = false
-		if baseGameName then
-			self.save(baseGameName)
-		end
+		trackedSnapshotData.moveHistoryIntact = true
+		trackedSnapshotData.moveDataQueried = false
+		trackedSnapshotData.expectedMoveSnapshot = newHash
 	end
 
-	function self.verifyMoveProgression()
-		local actualLoaded = gameinfo.getromhash()
-		trackedData.currentMoveSnapshot = actualLoaded
-		
-		if trackedData.currentMoveSnapshot ~= trackedData.expectedMoveSnapshot then
-			if trackedData.firstPokemon ~= nil then
-				trackedData.moveHistoryIntact = false
-				if baseGameName then
-					self.save(baseGameName)
-				end
-			end
-		end
-	end
-	
 	function self.hasMoveMid()
-		return trackedData.moveDataQueried or not trackedData.moveHistoryIntact
+		return trackedSnapshotData.moveDataQueried
 	end
-	
-	function self.hasMoveSnapshotFull()
-		return trackedData.currentMoveSnapshot ~= trackedData.expectedMoveSnapshot
+
+	local function resetTrackedData()
+		local copyExpectedMoveSnapshot = trackedSnapshotData.expectedMoveSnapshot
+		local copyCurrentMoveSnapshot = trackedSnapshotData.currentMoveSnapshot
+		local copyMoveDataQueried = trackedSnapshotData.moveDataQueried
+		local copyMoveHistoryIntact = trackedSnapshotData.moveHistoryIntact
+
+		trackedData = {
+			currentTimerSeconds = 0,
+			encounterData = {},
+			runOver = false,
+			progress = PlaythroughConstants.PROGRESS.NOWHERE,
+			firstPokemon = nil,
+			trackedPokemon = {},
+			bookmarkedIDs = {},
+			currentHiddenPowerType = PokemonData.POKEMON_TYPES.BUG,
+			currentHiddenPowerIndex = 1,
+			pokecenterCount = 10
+		}
+
+		trackedSnapshotData = {
+			expectedMoveSnapshot = copyExpectedMoveSnapshot,
+			currentMoveSnapshot = copyCurrentMoveSnapshot,
+			moveDataQueried = copyMoveDataQueried,
+			moveHistoryIntact = copyMoveHistoryIntact
+		}
 	end
 
 	function self.setFirstPokemon(pokemon)
-		if trackedData.firstPokemon == nil then
+		if trackedData.moveHistoryIntact == false then
+			resetTrackedData()
+			self.save()
 			trackedData.firstPokemon = MiscUtils.shallowCopy(pokemon)
+		else
+			if trackedData.firstPokemon == nil then
+				trackedData.firstPokemon = MiscUtils.shallowCopy(pokemon)
+			end
 		end
 	end
 
@@ -132,8 +160,8 @@ local function Tracker()
 		return trackedData.firstPokemon.pokemonID
 	end
 
-	function self.loadTotalPlaytime(gameName)
-		local playtimeFile = "savedData/" .. gameName .. ".pt"
+	function self.loadTotalPlaytime()
+		local playtimeFile = "savedData/" .. localGameName .. ".pt"
 		local seconds = tonumber(MiscUtils.readStringFromFile(playtimeFile) or "", 10)
 		if type(seconds) == "number" then
 			totalSeconds = seconds
@@ -146,8 +174,8 @@ local function Tracker()
 		return (string.format("%.1f hours", hours))
 	end
 
-	function self.updatePlaytime(gameName)
-		local playtimeFile = "savedData/" .. gameName .. ".pt"
+	function self.updatePlaytime()
+		local playtimeFile = "savedData/" .. localGameName .. ".pt"
 		local additionalTime = math.max(os.time() - sessionStartTime, 0)
 		totalSeconds = startSeconds + additionalTime
 		MiscUtils.writeStringToFile(playtimeFile, tostring(totalSeconds))
@@ -163,49 +191,53 @@ local function Tracker()
 				trackerData[key] = value
 			end
 		end
-		trackerData["priorMoveSnapshot"] = trackedData["priorMoveSnapshot"]
 		trackerData["expectedMoveSnapshot"] = trackedData["expectedMoveSnapshot"]
 		trackerData["currentMoveSnapshot"] = trackedData["currentMoveSnapshot"]
 		trackedData = trackerData
 	end
 
-	function self.loadData(gameName)
-		baseGameName = gameName
-		local savedData = MiscUtils.getTableFromFile("savedData/" .. gameName .. ".trackerdata")
-		if savedData == nil then
-			savedData = MiscUtils.getTableFromFile("autosave.trackerdata")
-		end
-		if savedData == nil then
-			return
+	function self.loadData()
+		local savedRomHash = savedSnapshotData.expectedMoveSnapshot
+		local currentRomHash = savedSnapshotData.currentMoveSnapshot
+		local loadedRomHash = gameinfo.getromhash()
+		local mismatch = false
+
+		if loadedRomHash ~= savedSnapshotData.expectedMoveSnapshot then
+			mismatch = true
+		else
+			if trackedSnapshotData.moveHistoryIntact == true then
+				if currentRomHash ~= savedRomHash then
+					resetTrackedData()
+					self.save()
+				else
+					print("Matching ROM found. Loading previously tracked data...")
+				end
+			else
+				if loadedRomHash == savedRomHash then
+					trackedSnapshotData.moveHistoryIntact = true
+					self.save()
+				end
+			end
 		end
 
-		local savedRomHash = savedData.expectedMoveSnapshot or savedData.romHash
-		local actualLoadedHash = gameinfo.getromhash()
-		
-		if savedRomHash == actualLoadedHash then
-			print("Matching ROM found. Loading previously tracked data...")
-			for key, value in pairs(trackedData) do
-				if not savedData[key] then
-					savedData[key] = value
-				end
-			end
-			trackedData = savedData
-			trackedData.currentMoveSnapshot = actualLoadedHash
-		else
-			if savedData.firstPokemon ~= nil then
-				for key, value in pairs(trackedData) do
-					if not savedData[key] then
-						savedData[key] = value
-					end
-				end
-				trackedData = savedData
-				trackedData.moveHistoryIntact = false
-				trackedData.currentMoveSnapshot = actualLoadedHash
-			else
-				trackedData.expectedMoveSnapshot = actualLoadedHash
-				trackedData.currentMoveSnapshot = actualLoadedHash
-			end
+		if mismatch then
+			trackedSnapshotData.moveHistoryIntact = false
+			trackedData = {
+				currentTimerSeconds = savedBackupData.currentTimerSeconds or 0,
+				encounterData = savedBackupData.encounterData or {},
+				runOver = savedBackupData.runOver or false,
+				progress = savedBackupData.progress or PlaythroughConstants.PROGRESS.NOWHERE,
+				firstPokemon = savedBackupData.firstPokemon or nil,
+				trackedPokemon = savedBackupData.trackedPokemon or {},
+				bookmarkedIDs = savedBackupData.bookmarkedIDs or {},
+				previousMoveSnapshot = savedBackupData.previousMoveSnapshot or nil,
+				currentHiddenPowerType = savedBackupData.currentHiddenPowerType or PokemonData.POKEMON_TYPES.BUG,
+				currentHiddenPowerIndex = savedBackupData.currentHiddenPowerIndex or 1,
+				pokecenterCount = savedBackupData.pokecenterCount or 10
+			}
+			self.save()
 		end
+
 	end
 
 	local function createNewPokemonEntry(pokemonID)
@@ -280,7 +312,7 @@ local function Tracker()
 	end
 
 	function self.getPokecenterCount()
-		return trackedData.pokecenterCount
+		return trackedData.pokecenterCount or 10
 	end
 
 	function self.getTrackedIDs()
@@ -595,9 +627,13 @@ local function Tracker()
 			return trackedData.trackedPokemon[pokemonID].statPredictions
 		end
 	end
-
-	function self.save(gameName)
-		MiscUtils.saveTableToFile("savedData/" .. gameName .. ".trackerdata", trackedData)
+	function self.save()
+		MiscUtils.saveTableToFile("backup/" .. localGameName .. "-snapshot.trackerdata", trackedSnapshotData)
+		if trackedSnapshotData.moveHistoryIntact then
+			MiscUtils.saveTableToFile("savedData/" .. localGameName .. ".trackerdata", trackedData)
+		else
+			MiscUtils.saveTableToFile("backup/" .. localGameName .. "-backup.trackerdata", trackedData)
+		end
 	end
 
 	return self

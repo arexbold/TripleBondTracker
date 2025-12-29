@@ -36,10 +36,7 @@ local function BattleOptionsScreen(initialSettings, initialTracker, initialProgr
             "AUTO_SWAP_TO_ENEMY",
             "SHOW_MOVE_EFFECTIVENESS",
             "CALCULATE_VARIABLE_DAMAGE",
-            "SHOW_ACTUAL_ENEMY_PP",
-            "SHOW_1ST_FIGHT_STATS_PLATINUM",
-            "ENABLE_ENEMY_LOCKING",
-            "DOUBLES_MODE"
+            "SHOW_ACTUAL_ENEMY_PP"
         }
         for _, key in pairs(orderedKeys) do
             local frame =

@@ -80,8 +80,7 @@ local function Main()
 	end
 
 	local function loadNext()
-		tracker.updatePlaytime(program.getGameInfo().NAME)
-		tracker.captureMoveSnapshot()
+		tracker.updatePlaytime()
 		local soundOn = client.GetSoundOn()
 		client.SetSoundOn(false)
 		local nextRomInfo
@@ -97,6 +96,7 @@ local function Main()
 				loadNextSeed = false
 				if tracker ~= nil then
 					tracker.synchronizeMoveHistory()
+					tracker.save()
 				end
 				self.run()
 			end
@@ -185,8 +185,8 @@ local function Main()
 		else
 			dofile(Paths.FOLDERS.CONSTANTS_FOLDER .. "/EvoDataGen5.lua")
 		end
-		tracker.loadData(gameConfiguration.gameInfo.NAME)
-		tracker.loadTotalPlaytime(gameConfiguration.gameInfo.NAME)
+		tracker.loadData()
+		tracker.loadTotalPlaytime()
 		QuickLoader.initialize(settings.quickLoad)
 		program = Program(tracker, gameConfiguration.memoryAddresses, gameConfiguration.gameInfo, settings)
 		local gameInfo = gameConfiguration.gameInfo
