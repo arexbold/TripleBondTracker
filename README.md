@@ -9,11 +9,11 @@ HUGE THANKS to OnlySpaghettiCode, UTDZac, and Mixone for helping make this compa
 If you're looking for the ACTUAL NDS Ironmon Tracker go here: [release page](https://github.com/Brian0255/NDS-Ironmon-Tracker/releases) for changelogs and downloads.
 
 ## Controls
-**Select Button**: While in/out of battle you can cycle between your party members.
+**Select Button**: While in/out of battle you can cycle between your party members to see information.
 
 **L Button**: Toggle EVs window to see the current EVs on your Pokemon.
 
-**Start Button**: Only while in battle you can cycle between the enemy mon and your active mon.
+**Start Button**: Only while in battle you can cycle between the enemy mon information and your active mon.
 
 
 ## Installation
