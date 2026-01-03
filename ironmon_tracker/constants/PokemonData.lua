@@ -1812,7 +1812,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Lickitung",
         type = {PokemonData.POKEMON_TYPES.NORMAL, PokemonData.POKEMON_TYPES.EMPTY},
-        evolution = "33",
+        evolution = "24",
         bst = "385",
         movelvls = {
             {5, 9, 13, 17, 21, 25, 29, 33, 37, 41, 45, 49, 53},
@@ -1903,7 +1903,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Tangela",
         type = {PokemonData.POKEMON_TYPES.GRASS, PokemonData.POKEMON_TYPES.EMPTY},
-        evolution = "33",
+        evolution = "24",
         bst = "435",
         movelvls = {
             {5, 8, 12, 15, 19, 22, 26, 29, 33, 36, 40, 43, 47, 50, 54},
@@ -3092,7 +3092,7 @@ PokemonData.POKEMON_MASTER_LIST = {
     {
         name = "Yanma",
         type = {PokemonData.POKEMON_TYPES.BUG, PokemonData.POKEMON_TYPES.FLYING},
-        evolution = "33",
+        evolution = "24",
         bst = "390",
         movelvls = {
             {6, 11, 14, 17, 22, 27, 30, 33, 38, 43, 46, 49, 54, 57},

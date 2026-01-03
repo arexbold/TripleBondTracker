@@ -372,7 +372,8 @@ local function MainScreen(initialSettings, initialTracker, initialProgram)
                     moveData,
                     opposingPokemon,
                     opposingPokemon == program.SELECTED_PLAYERS.ENEMY,
-                    tracker.getCurrentHiddenPowerType()
+                    tracker.getCurrentHiddenPowerType(),
+                    currentPokemon
                 )
                 table.insert(
                     extraThingsToDraw.moveEffectiveness,

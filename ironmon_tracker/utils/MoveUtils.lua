@@ -14,7 +14,7 @@ function MoveUtils.calculateLevelRangeOfMove(levelIndex, learnSet)
     return "Lv. " .. startLevel .. " - " .. endLevel
 end
 
-function MoveUtils.netEffectiveness(move, pkmnData, isEnemy, hiddenPowerType)
+function MoveUtils.netEffectiveness(move, pkmnData, isEnemy, hiddenPowerType, playerPokemon)
     local NO_EFFECT_PAIRINGS = {
         [PokemonData.POKEMON_TYPES.NORMAL] = PokemonData.POKEMON_TYPES.GHOST,
         [PokemonData.POKEMON_TYPES.FIGHTING] = PokemonData.POKEMON_TYPES.GHOST,
@@ -43,8 +43,8 @@ function MoveUtils.netEffectiveness(move, pkmnData, isEnemy, hiddenPowerType)
         if move.name == "Hidden Power" and not isEnemy then
             moveType = hiddenPowerType
         end
-        if move.name == "Judgment" and not isEnemy and PokemonData.PLATE_TO_TYPE[tonumber(pkmnData.heldItem)] ~= nil then
-            moveType = PokemonData.PLATE_TO_TYPE[tonumber(pkmnData.heldItem)]
+        if move.name == "Judgment" and not isEnemy and playerPokemon and PokemonData.PLATE_TO_TYPE[tonumber(playerPokemon.heldItem)] ~= nil then
+            moveType = PokemonData.PLATE_TO_TYPE[tonumber(playerPokemon.heldItem)]
         end
         if moveType ~= "---" then
             if MoveData.EFFECTIVE_DATA[moveType][type] ~= nil then
