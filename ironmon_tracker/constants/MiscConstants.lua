@@ -6,6 +6,7 @@ MiscConstants.BIZHAWK_VERSION = client.getversion()
 
 MiscConstants.UPDATE_NOTES = {
     "Game patch update REQUIRED! Please visit the main challenge github after you download this version of the tracker.",
+	"If you are NOT currently on a run, please re-randomize after the tracker updates.",
 	"Changes for tracker:",
 	"-- Fixed Judgment effective bug.",
 	"-- Updated data for evo levels for Lickitung, Tangela, and Yanma to 24.",
