@@ -1,11 +1,17 @@
 MiscConstants = {}
 
-MiscConstants.TRACKER_VERSION = "1.0.0"
+MiscConstants.TRACKER_VERSION = "1.0.1"
 
 MiscConstants.BIZHAWK_VERSION = client.getversion()
 
 MiscConstants.UPDATE_NOTES = {
-    "-- Release version. --",
+    "Game patch update REQUIRED!",
+	"Changes for tracker:",
+	"-- Fixed Judgment effective bug.",
+	"-- Updated data for evo levels for Lickitung, Tangela, and Yanma to 24.",
+	"-- Updated data for PP on all pure setup moves. All setup moves are 3 PP.",
+	"-- Updated Randomizer JAR.",
+	"-- Updated Settings file."
 }
 
 MiscConstants.DEFAULT_SETTINGS = {
