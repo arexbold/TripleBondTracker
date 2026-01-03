@@ -5,7 +5,7 @@ MiscConstants.TRACKER_VERSION = "1.0.1"
 MiscConstants.BIZHAWK_VERSION = client.getversion()
 
 MiscConstants.UPDATE_NOTES = {
-    "Game patch update REQUIRED!",
+    "Game patch update REQUIRED! Please visit the main challenge github after you download this version of the tracker.",
 	"Changes for tracker:",
 	"-- Fixed Judgment effective bug.",
 	"-- Updated data for evo levels for Lickitung, Tangela, and Yanma to 24.",
